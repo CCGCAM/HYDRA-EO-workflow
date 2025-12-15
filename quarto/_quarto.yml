@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: ../docs-quarto
+
+website:
+  title: "HYDRA-EO"
+  navbar:
+    logo: ../assets/ESA_logo_2020_White.png   # o .svg
+    left:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Pipeline"
+        href: pipeline.qmd
+      - text: "Tools"
+        href: tools.qmd
+      - text: "docs"
+        href: documents.qmd
+      - text: "Timeline"
+        href: timeline.qmd
+    right:
+      - text: "Main site"
+        href: "../index.html"    # botón que vuelve a la web ESA
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: false
+    code-copy: true
+    smooth-scroll: true
+    page-layout: full
+

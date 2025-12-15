@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HYDRA-EO · Internal Pipelines & Methods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* =========================================
+   0. ROOT VARIABLES & GLOBAL RESETS
+   ========================================= */
+:root {
+  --esa-blue: #003f7d;
+  --esa-light-blue: #0083c7;
+  --accent: #00bcd4;
+  --esa-accent: #0083c7;       /* link accent */
+  --esa-gold: #f2a900;         /* subtle hover accent */
+  --bg-light: #f5f7fb;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --border-soft: #e1e4ec;
+  --border-subtle: #e4e8f4;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --radius-lg: 18px;
+  --radius-sm: 10px;
+  --transition-fast: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   1. NAVBAR
+   ========================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--esa-blue);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--esa-light-blue);
+  transition: width var(--transition-fast);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--esa-light-blue);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--esa-light-blue);
+  background: #ffffff;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.nav-cta:hover {
+  background: var(--esa-light-blue);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--esa-blue);
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* --- MOBILE NAVIGATION --- */
+.nav-links-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 24px;
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-links-mobile a {
+  font-size: 14px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.nav-links-mobile.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+
+/* ===============================
+   ESA LOGO – Position & Sizing
+   =============================== */
+
+/* Container for the ESA logo */
+.esa-logo {
+  position: absolute;      /* Places the logo over the layout */
+  top: 20px;               /* Distance from the top */
+  left: 20px;              /* Distance from the left */
+  z-index: 2000;           /* Ensures visibility above other elements */
+}
+
+/* Default size of the ESA logo */
+.esa-logo-img {
+  width: 120px;            /* Standard small size */
+  height: auto;            /* Keeps original aspect ratio */  opacity: 0.95;           /* Slight transparency for a smooth look */
+}
+/* ESA logo fixed on top-left of the navbar */
+.esa-logo-fixed {
+  position: absolute;
+  top: 50%;              /* vertically centered in the navbar */
+  left: 150px;            /* distance from left edge */
+  transform: translateY(-50%);
+  width: 120px;           /* adjust size as you like */
+  height: auto9
+}
+
+/* Optional: Extra-small logo */
+.esa-logo.small .esa-logo-img {
+  width: 90px;
+}
+
+/* Optional: Medium size logo */
+.esa-logo.medium .esa-logo-img {
+  width: 150px;
+}
+
+/* Responsive adjustment for mobile devices */
+@media (max-width: 768px) {
+  .esa-logo-img {
+    width: 90px;           /* Smaller logo on phones */
+  }
+    .esa-logo-fixed {
+    width: 32px;   /* smaller ESA logo in mobile */
+    left: 12px;    /* optional: bring slightly closer to edge */
+  }
+}
+
+
+/* =========================================
+   2. HERO SECTION (INTERNAL)
+   ========================================= */
+.hero {
+  padding: 120px 20px 70px;
+  background: radial-gradient(
+    circle at top left,
+    #e2f3ff 0,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 40px;
+    width: 100%;
+  margin-bottom: 22px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-inner > div:first-child {
+  max-width: 100%;
+}
+
+.hero-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--esa-light-blue);
+  font-weight: 500;
+  margin-bottom: 10px;
+    width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-title {
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--esa-blue);
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 22px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-title span {
+  display: inline-block;
+  max-width: none;
+}
+
+.hero-title-main {
+  background: linear-gradient(90deg, #003f7d 0%, #005aa3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  width: 100%;
+  margin-bottom: 22px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-tags {
+  display: flex;
+   width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.hero-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #d4e4f5;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e8f2;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  font-size: 13px;
+  color: var(--text-muted);
+
+  text-align: left;
+}
+
+.hero-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--esa-blue);
+  margin-bottom: 6px;
+}
+
+/* HERO BUTTONS */
+.btn-primary {
+  background: var(--esa-blue);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 63, 125, 0.3);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 63, 125, 0.38);
+  background: #002a52;
+}
+
+/* =========================================
+   3. GENERIC SECTIONS
+   ========================================= */
+section {
+  padding: 40px 10px;
+  scroll-margin-top: 90px;
+   width: 100%;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 18px;
+  max-width: 100%;
+}
+
+.section-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--esa-light-blue);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--esa-blue);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.6rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.section-bg-light {
+  background: var(--bg-light);
+}
+
+/* =========================================
+   4. GRID / CARDS (REUSING PUBLIC STYLE)
+   ========================================= */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 32px;
+}
+
+.tool-card,
+.wp-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 22px;
+  border: 1px solid #e4e8f4;
+  box-shadow: var(--card-shadow);
+  padding: 30px 32px;
+  font-size: 14px;
+}
+
+.wp-card a {
+  color: var(--esa-light-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.wp-card a:hover {
+  color: var(--esa-blue);
+  text-decoration: underline;
+}
+
+.tool-card-title,
+.wp-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--esa-blue);
+  margin-bottom: 8px;
+}
+
+.tool-card p,
+.wp-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #5f646e;
+}
+
+.wp-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--esa-light-blue);
+  margin-bottom: 4px;
+}
+
+/* Pill label style for internal tags */
+.pill-mini {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #d4d9e8;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* =========================================
+   5. METHODS LAYOUT
+   ========================================= */
+.methods-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.methods-steps {
+  list-style: none;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.methods-steps li {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.methods-steps li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--esa-light-blue);
+}
+
+/* Side card */
+.pipeline-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #e3e7f3;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--esa-light-blue);
+  font-weight: 600;
+}
+
+/* =========================================
+   6. CODE CARDS (ADAPTED TO INTERNAL CONTENT)
+   ========================================= */
+.tutorials-content {
+  margin-top: 1.2rem;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  max-height: 5000px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.tutorials-content.hidden {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Toggle button */
+#toggle-tutorials {
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+#toggle-tutorials:hover {
+  background: #08306b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Code card container */
+.code-card {
+  background: #ffffff;
+  border-radius: 26px;
+  border: 1px solid #e4e8f4;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.code-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 8px 20px;
+}
+
+.code-badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #d4d9e8;
+  color: #6b7280;
+}
+
+.code-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--esa-blue);
+}
+
+/* Collapse using <details> */
+.code-collapse {
+  margin: 0;
+  border-radius: 0;
+  background: #020617;
+  border-top: 1px solid #000;
+}
+
+.code-collapse summary {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 18px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.code-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+.code-collapse summary::before {
+  content: "▶ ";
+  color: #ffffff;
+}
+
+.code-collapse[open] summary::before {
+  content: "▼ ";
+  color: var(--esa-light-blue);
+}
+
+.code-card-body {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 14px 18px 18px;
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+.code-card-body pre {
+  margin: 0;
+  white-space: pre;
+}
+
+.code-card-body code {
+  white-space: pre;
+}
+
+/* Copy button */
+.copy-btn {
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  margin: 0 0 8px 8px;
+  transition: 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #08306b;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+  background: #020817;
+  color: #d9e2ff;
+  padding: 26px 20px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: #aebce8;
+}
+
+.footer-note {
+  font-size: 11px;
+  color: #aebce8;
+}
+
+/* =========================================
+   8. RESPONSIVE
+   ========================================= */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid,
+  .wp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  section {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .tools-grid,
+  .wp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+     <img src="assets/ESA_logo_2020_Deep.png" alt="ESA logo" class="esa-logo-fixed">
+    <div class="nav-logo">
+      HYDRA-EO project
+      <span>Internal pipelines &amp; methods</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#pipelines">Pipelines</a>
+      <a href="#methods">Methods</a>
+      <a href="#tools">ToolsRTM &amp; SCOPEinR</a>
+      <a href="#docs">Docs</a>
+      <button class="nav-cta" onclick="openDomainModal();">
+        Public site
+        </button>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="nav-links-mobile" id="navMobile">
+    <a href="#overview">Overview</a>
+    <a href="#pipelines">Pipelines</a>
+    <a href="#methods">Methods</a>
+    <a href="#tools">ToolsRTM &amp; SCOPEinR</a>
+    <a href="#docs">Docs</a>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- HERO / OVERVIEW -->
+<section id="overview" class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">Internal workspace · ESA HYDRA-EO</div>
+      <h1 class="hero-title">
+        <span class="hero-title-main">HYDRA-EO internal workflow repository</span>
+      </h1>
+      <p class="hero-subtitle">
+        This internal page summarises the main processing pipelines, methodological
+        choices and software components developed within HYDRA-EO. It is intended
+        for the consortium (WU-DES, WENR-WUR, CNR-IBE, CIAG-IRIAF) and should not be
+        shared outside ESA and project partners without prior agreement.
+      </p>
+
+      <div class="hero-tags">
+        <span class="hero-tag">UAV &amp; airborne</span>
+        <span class="hero-tag">RTM libraries</span>
+        <span class="hero-tag">Hybrid ML</span>
+        <span class="hero-tag">Crop–stressor trials</span>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('pipelines').scrollIntoView({behavior:'smooth'});">
+          View pipelines
+        </button>
+        <button class="btn-primary" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});">
+          ToolsRTM &amp; SCOPEinR
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- PIPELINES -->
+<section id="pipelines">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Pipelines</div>
+      <h2 class="section-title">Processing pipelines by data source</h2>
+      <p class="section-subtitle">
+        Pipelines are organised by data source and level of processing. Each
+        pipeline folder in the repository should contain a <code>README.md</code>
+        describing inputs, steps, outputs and links to scripts or notebooks.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      <article class="tool-card">
+        <div class="pill-mini">UAV / airborne</div>
+        <h3 class="tool-card-title">UAV &amp; airborne processing</h3>
+        <p>
+          Radiometric and geometric correction of UAV and airborne
+          hyperspectral/thermal data, mosaicking, BRDF normalisation and
+          co-registration with field plots. Output products include surface
+          reflectance cubes, temperature maps and quality masks.
+        </p>
+      </article>
+
+      <article class="tool-card">
+        <div class="pill-mini">Satellite</div>
+        <h3 class="tool-card-title">Satellite EO processing</h3>
+        <p>
+          Sentinel-2, PRISMA and EnMAP workflows (e.g. Sen2Cor atmospheric
+          correction, spectral resampling, tiling and time-series aggregation),
+          harmonised across sites for crop-stressor analysis and EO upscaling.
+        </p>
+      </article>
+
+      <article class="tool-card">
+        <div class="pill-mini">RTM–ML</div>
+        <h3 class="tool-card-title">RTM library &amp; hybrid ML</h3>
+        <p>
+          PROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR,
+          LUT generation, plant trait retrieval, and hybrid ML models trained on
+          combined RTM–EO features for stress detection.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section id="methods" class="section-bg-light">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Methods</div>
+      <h2 class="section-title">Key methodological blocks</h2>
+      <p class="section-subtitle">
+        This section documents key methodological blocks: radiative transfer
+        configurations, trait retrieval strategies and disease scoring.
+      </p>
+    </div>
+
+    <div class="tools-grid">
+      <article class="tool-card">
+        <div class="pill-mini">RTM configs</div>
+        <h3 class="tool-card-title">Radiative transfer set-ups</h3>
+        <p>
+          Standard parameter ranges for PROSPECT, PROSAIL, FLUSPECT, fourSAIL
+          and MARMIT used in HYDRA-EO simulations (Chlorophyll, LAI, EWT, dry matter, N, soil
+          moisture, view–illumination geometries, etc.).
+        </p>
+      </article>
+
+      <article class="tool-card">
+        <div class="pill-mini"> Plant traits</div>
+        <h3 class="tool-card-title">Functional plant trait retrieval</h3>
+        <p>
+          Hybrid inversion schemes linking RTM-based libraries with ML
+          (RF, GPR, CNN) for the retrieval of chlorophyll, LAI, canopy
+          temperature, stress indices and SIF-related variables.
+        </p>
+      </article>
+
+      <article class="tool-card">
+        <div class="pill-mini">Diseases</div>
+        <h3 class="tool-card-title">Disease scoring &amp; labels</h3>
+        <p>
+          Harmonised disease scoring protocols for <em>Flavescence Dorée</em>,
+          Potato virus&nbsp;Y, <em>Septoria</em> spp. and
+          <em>Pseudomonas savastanoi</em>, including categorical and quantitative
+          labels used in ML pipelines.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLSRTM & SCOPEinR -->
+<section id="tools">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">ToolsRTM &amp; SCOPEinR</div>
+      <h2 class="section-title">Core R packages used in HYDRA-EO</h2>
+      <p class="section-subtitle">
+        HYDRA-EO uses two core R packages maintained at WUR:
+        <strong>ToolsRTM</strong> for accessing multiple radiative transfer models,
+        and <strong>SCOPEinR</strong> for SCOPE-style energy-balance and fluorescence
+        simulations.
+      </p>
+    </div>
+
+    <!-- INSTALL TOOLSRTM -->
+    <div class="code-card">
+      <div class="code-card-header">
+        <span class="code-badge">R · ToolsRTM</span>
+        <span class="code-title">Install ToolsRTM (GitLab)</span>
+      </div>
+      <details class="code-collapse" open>
+        <summary>Show installation snippet</summary>
+        <div class="code-card-body">
+          <button class="copy-btn" data-copy="code-install-toolsrtm">
+            Copy
+          </button>
+<pre id="code-install-toolsrtm"><code>
+## Install ToolsRTM package from GitLab (HYDRA-EO branch if available).
+if (!requireNamespace("ToolsRTM", quietly = TRUE)) {
+  install.packages("remotes")  # only if remotes is missing
+  remotes::install_gitlab("caminoccg/toolsrtm", upgrade = "never")
+}
+</code></pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- get.simulator -->
+    <div class="code-card">
+      <div class="code-card-header">
+        <span class="code-badge">R · ToolsRTM</span>
+        <span class="code-title">Access RTMs via ToolsRTM::get.simulator()</span>
+      </div>
+      <details class="code-collapse" open>
+        <summary>Show get.simulator() calls (from README)</summary>
+        <div class="code-card-body">
+          <button class="copy-btn" data-copy="code-getsim">
+            Copy
+          </button>
+<pre id="code-getsim"><code>
+ToolsRTM::get.simulator(app = "SCOPE")
+ToolsRTM::get.simulator(app = "PROSAIL-BRDF")
+ToolsRTM::get.simulator(app = "getLUT")
+?get.simulator  # to see more options
+</code></pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- PROSAIL demo / LUT+fourSAIL example -->
+    <div class="code-card">
+      <div class="code-card-header">
+        <span class="code-badge">R · ToolsRTM</span>
+        <span class="code-title">Basic PROSAIL simulation (internal demo)</span>
+      </div>
+      <details class="code-collapse" open>
+        <summary>Show PROSAIL demo code</summary>
+        <div class="code-card-body">
+          <button class="copy-btn" data-copy="code-prosail-demo">
+            Copy
+          </button>
+<pre id="code-prosail-demo"><code>
+library(ToolsRTM)
+
+# 2.2 Generate a LUT with 2000 samples
+set.seed(1234)
+n.samples = 2000
+LUT &lt;- as.data.frame(ToolsRTM::getLUT(inputs = inputs, nLUT = n.samples, setseed = 1234))
+# Long format for ggplot
+lut_long &lt;- LUT |&gt;
+  select(all_of(traits_to_plot)) |&gt;
+  pivot_longer(cols = everything(),
+               names_to = "Trait",
+               values_to = "Value")
+
+# Histogram (barplot) per trait
+ggplot(lut_long, aes(x = Value)) +
+  geom_histogram(fill = "grey70", color = "black", bins = 20) +
+  facet_wrap(~ Trait, scales = "free") +
+  theme_bw() +
+  xlab("Value") +
+  ylab("Frequency") +
+  ggtitle("Histogram of LUT input traits (PROSAIL simulations)")
+
+sims &lt;- lapply(seq_len(nrow(LUT)), function(i) {
+
+  # FourSAIL simulation for one LUT configuration
+  out &lt;- suppressMessages(
+    ToolsRTM::foursail(
+      inputLUT     = LUT[i, ],
+      rsoil        = rsoil.default,
+      LeafModel    = "PROSPECT-D",    # biochemical leaf model
+      spectrum.all = TRUE             # output full spectral components
+    )
+  )
+
+  # Compute BRF (Bidirectional Reflectance Factor)
+  # BRF combines directional/diffuse reflectance according to solar zenith angle (tts)
+  brf &lt;- ToolsRTM::Compute_BRF(
+    rdot = out$rdot,                    # diffuse → observer
+    rsot = out$rsot,                    # direct sun → observer
+    tts  = LUT[i, "tts"],               # solar zenith angle
+    data.light = ToolsRTM::dataSpec_PDB
+  )
+
+  # Return tidy tibble for this simulation
+  tibble(
+    run = i,
+    wl  = wl_grid,
+    rho = as.numeric(brf)
+  )
+})
+</code></pre>
+        </div>
+      </details>
+    </div>
+
+    <!-- SCOPEinR -->
+    <div class="code-card">
+      <div class="code-card-header">
+        <span class="code-badge">R · SCOPEinR</span>
+        <span class="code-title">Install SCOPEinR and run simulations</span>
+      </div>
+      <details class="code-collapse" open>
+        <summary>Show SCOPEinR installation snippet and example</summary>
+        <div class="code-card-body">
+          <button class="copy-btn" data-copy="code-install-scopeinr">
+            Copy
+          </button>
+<pre id="code-install-scopeinr"><code>
+## Install SCOPEinR package from GitLab.
+remotes::install_gitlab("caminoccg/scopeinr", upgrade = "never")
+Table.LUT &lt;- read.table(
+    "Tables/inputs/LUT_input.csv",
+    header = TRUE, sep = ","
+  )
+
+db.sim &lt;- SCOPEinR::get.SCOPE(
+  LUT           = Table.LUT[1, ],
+  options.SCOPE = table.with.opts,
+  optipar       = SCOPEinR::optipar2021.Pro.CX,
+  leaf.model    = "fluspect-CX",
+  canopy.model  = "fourSAIL",
+  get.outputs   = "ALL",
+  get.plots     = FALSE
+)
+</code></pre>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS & REPOS -->
+<section id="docs" class="section-bg-light">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Documentation &amp; repositories</div>
+      <h2 class="section-title">Internal docs &amp; code access</h2>
+      <p class="section-subtitle">
+        Links for consortium members. Please keep these URLs internal to HYDRA-EO
+        and ESA unless explicitly approved for public release.
+      </p>
+    </div>
+
+    <div class="wp-grid">
+      <article class="wp-card">
+        <div class="wp-label">Git repositories</div>
+        <div class="wp-title">Code &amp; pipelines</div>
+        <p class="wp-text">
+          • HYDRA-EO main repo (pipelines &amp; notebooks)<br>
+          • ToolsRTM <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank">gitlab.com/caminoccg/toolsrtm</a><br>
+          • SCOPEinR <a href="https://gitlab.com/caminoccg/scopeinr" target="_blank">gitlab.com/caminoccg/scopeinr</a>
+        </p>
+      </article>
+
+      <article class="wp-card">
+        <div class="wp-label">Docs</div>
+        <div class="wp-title">Internal documentation</div>
+        <p class="wp-text">
+          • Methodological notes and protocol PDFs<br>
+          • Field manuals for disease scoring and sampling<br>
+          • Meeting minutes and ESA reporting templates
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <span>
+        HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
+        “Crop Multiple Stressors, Pests and Diseases”. Action 1-12684.
+      </span>
+      <div class="footer-links">
+        <a href="#top">Top</a>
+        <a href="#pipelines">Pipelines</a>
+        <a href="docs-quarto/index.html">Tools</a>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Internal pipelines &amp; methods · WU-DES · HYDRA-EO consortium
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // MOBILE NAV TOGGLE
+  const navToggle = document.getElementById("navToggle");
+  const navMobile = document.getElementById("navMobile");
+
+  if (navToggle && navMobile) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navMobile.classList.toggle("show");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+
+  // Scroll to top for footer links
+  document.querySelectorAll('a[href="#top"]').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
+  // Copy code buttons (using data-copy=id)
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const targetId = btn.getAttribute("data-copy");
+      const el = document.getElementById(targetId);
+      if (!el) return;
+
+      const text = el.textContent.replace(/^\n+|\s+$/g, "");
+
+      try {
+        await navigator.clipboard.writeText(text);
+        const old = btn.textContent;
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = old), 1200);
+      } catch (e) {
+        console.error("Clipboard error", e);
+        btn.textContent = "Error";
+        setTimeout(() => (btn.textContent = "Copy"), 1200);
+      }
+    });
+  });
+
+  // Toggle tutorials (if you later want to wrap code cards in a collapsible section)
+  const toggleBtn = document.getElementById("toggle-tutorials");
+  const tutorialsContent = document.getElementById("tutorials-content");
+  if (toggleBtn && tutorialsContent) {
+    toggleBtn.addEventListener("click", () => {
+      const hidden = tutorialsContent.classList.toggle("hidden");
+      toggleBtn.textContent = hidden ? "Show tutorials" : "Hide tutorials";
+    });
+  }
+});
+</script>
+
+
+<div id="domainModal" style="
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  backdrop-filter: blur(4px);
+  font-family: 'Poppins', sans-serif;">
+
+  <div style="
+    background: #ffffff;
+    padding: 30px 34px;
+    border-radius: 18px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;">
+
+    <h3 style="color:#003f7d; font-size: 22px; margin-bottom: 10px;">
+      Public Domain Not Configured
+    </h3>
+
+    <p style="color:#555; font-size: 15px; line-height: 1.6; margin-bottom: 22px;">
+      A public domain has not been set yet.
+      Please configure your final website URL before accessing the public site.
+    </p>
+
+    <button onclick="closeDomainModal()" style="
+      padding: 10px 22px;
+      background:#003f7d;
+      color:#ffffff;
+      border:none;
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      cursor:pointer;
+      transition: 0.25s ease;">
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+function openDomainModal() {
+  document.getElementById('domainModal').style.display = 'flex';
+}
+
+function closeDomainModal() {
+  document.getElementById('domainModal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

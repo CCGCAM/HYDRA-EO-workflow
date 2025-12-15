@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "consortium.html",
+    "href": "consortium.html",
+    "title": "Tools",
+    "section": "",
+    "text": "Section · Tools"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "This internal page summarises the main processing pipelines, methodological choices and software components developed within HYDRA-EO. It is intended for the consortium (WU-DES, WENR-WUR, CNR-IBE, CIAG-IRIAF) and should not be shared outside ESA and project partners without prior agreement.\n\n\n\nHybrid ML & RTMs\n\n\nCrop stress & pests\n\n\nHyperspectral & thermal\n\n\nESA EXPRO+ project"
+  },
+  {
+    "objectID": "tools.html",
+    "href": "tools.html",
+    "title": "Tools",
+    "section": "",
+    "text": "Section · Tools"
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "Section · News\n\n\nUpdates & tutorial releases\n\n\nUse this page to log new examples, datasets or notebooks as HYDRA-EO progresses: new RTM modules, field campaigns or integration with ESA missions.\n\n\n\n2026-01 – First prototype LUT tutorial for potato multi-stressor trials.\n\n\n2026-03 – Added example linking SCOPEinR simulations with flux tower GPP."
+  },
+  {
+    "objectID": "goals.html",
+    "href": "goals.html",
+    "title": "Goals",
+    "section": "",
+    "text": "Section · Goals\n\n\nProject goals in practice\n\n\nHere you can attach small scripts that correspond to HYDRA-EO objectives: early detection of disease, stress attribution, multi-sensor scaling and preparation for future missions (CHIME, LSTM, FLEX).\n\n\n\n&lt;div class=\"pill-mini\"&gt;Objective 1&lt;/div&gt;\n&lt;h3&gt;Trait retrieval experiments&lt;/h3&gt;\n&lt;p&gt;\n  Prototype inversion tests using synthetic datasets from ToolsRTM to recover LAI, Cab or\n  canopy temperature with simple ML models.\n&lt;/p&gt;\n\n\n&lt;div class=\"pill-mini\"&gt;Objective 2&lt;/div&gt;\n&lt;h3&gt;Multi-stressor separation&lt;/h3&gt;\n&lt;p&gt;\n  Explore feature combinations that help distinguish disease from drought or heat stress using\n  simulated spectra and indices.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Section · Contact\n\n\nContact & contributions\n\n\nIf you would like to contribute examples, report issues or reuse the tutorials for teaching, you can contact the HYDRA-EO team or open issues in the corresponding Git repositories.\n\n\n\nCoordination\n\n\nProject lead\n\n\nDr. Carlos Luis Camino González (Wageningen University & Research) – coordination of HYDRA-EO science activities and tutorial material.\n\n\n\n\nGitHub\n\n\nCode & examples\n\n\nHYDRA-EO tutorial repository (this site) on GitHub, plus links to ToolsRTM and SCOPEinR repositories on GitLab."
+  },
+  {
+    "objectID": "mission.html",
+    "href": "mission.html",
+    "title": "Mission",
+    "section": "",
+    "text": "Section · Mission"
+  },
+  {
+    "objectID": "pipeline.html",
+    "href": "pipeline.html",
+    "title": "Pipeline",
+    "section": "",
+    "text": "Section · Pipeline"
+  },
+  {
+    "objectID": "timeline.html",
+    "href": "timeline.html",
+    "title": "Timeline",
+    "section": "",
+    "text": "Section · Timeline"
+  },
+  {
+    "objectID": "mission.html#mission-scientific-drivers",
+    "href": "mission.html#mission-scientific-drivers",
+    "title": "Mission",
+    "section": "Mission & scientific drivers",
+    "text": "Mission & scientific drivers\nThis page mirrors the mission text of the main HYDRA-EO site, but focuses on small examples that illustrate why hybrid ML and radiative transfer models are needed to monitor crop multiple stressors.\n\n\n\nExample\n\n\nStress vs. control simulations\nUse ToolsRTM and SCOPEinR to simulate reflectance and SIF for control vs. stressed canopies (e.g. stomatal closure, pathogen infection, water deficit) and visualise spectral differences.\n\n\n\n\nLink to EO\n\n\nFrom traits to satellite bands\nShow how changes in LAI, Cab or Cw propagate to Sentinel-2, PRISMA or EnMAP bands, linking biophysical traits to spaceborne observables."
+  },
+  {
+    "objectID": "tools.html#software-used-in-hydra-eo-tutorials",
+    "href": "tools.html#software-used-in-hydra-eo-tutorials",
+    "title": "Tools",
+    "section": "Software used in HYDRA-EO tutorials",
+    "text": "Software used in HYDRA-EO tutorials\nThis page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.\n\n\n\nR · ToolsRTM\n\n\nCanopy & leaf RTMs\nForward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.\nGitLab: ToolsRTM\n\n\n\n\nR · SCOPEinR\n\n\nEnergy balance & SIF\nInterface to the SCOPE model for canopy fluxes, temperature and fluorescence.\nGitLab: SCOPEinR\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”\n\n\nAction 1-12684.\n\n\nSource repository:  Hydra-EO pipeline"
+  },
+  {
+    "objectID": "index.html#processing-pipelines-by-data-source",
+    "href": "index.html#processing-pipelines-by-data-source",
+    "title": "Overview",
+    "section": "Processing pipelines by data source",
+    "text": "Processing pipelines by data source\nPipelines are organised by data source and level of processing. Each pipeline folder in the repository should contain a README.md describing inputs, steps, outputs and links to scripts or notebooks.\n\n\n\nUAV/airborne\n\n\nUAV & airborne processing\nRadiometric and geometric correction of UAV and airborne hyperspectral/thermal data, mosaicking, BRDF normalisation and co-registration with field plots. Output products include surface reflectance cubes, temperature maps and quality masks.\n\n\n\n\nSatellite EO processing\n\n\nSatellite EO processing\nSentinel-2, PRISMA and EnMAP workflows (e.g. Sen2Cor atmospheric correction, spectral resampling, tiling and time-series aggregation), harmonised across sites for crop-stressor analysis and EO upscaling.\n\n\n\n\nRTM library & hybrid ML\n\n\nHybrid ML methods\nPROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, plant trait retrieval, and hybrid ML models trained on combined RTM–EO features for stress detection\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”.\n\n\nAction 1-12684.\n\n\nSource repository:  HYDRA-EO pipeline"
+  },
+  {
+    "objectID": "consortium.html#partners-roles-in-the-tutorials",
+    "href": "consortium.html#partners-roles-in-the-tutorials",
+    "title": "Consortium",
+    "section": "Partners & roles in the tutorials",
+    "text": "Partners & roles in the tutorials\nA compact description of which institutions contribute datasets, models, and tutorial material (e.g. WUR, CIAG-IRIAF, CNR, WENR). This page links to shared notebooks and Git repositories used across the HYDRA-EO tutorial platform.\n\n\n\nWUR\n\n\nRadiative transfer & ML\nScripts and tutorial material based on ToolsRTM, SCOPEinR, and hybrid machine-learning workflows developed and applied within the HYDRA-EO project.\n\n\n\n\nCIAG-IRIAF & CNR\n\n\nField campaigns & crops\nExample datasets and notebooks derived from pistachio, olive, and potato field trials, suitable for teaching, method development, and prototype analyses.\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”\n\n\nAction 1-12684.\n\n\nSource repository:  Hydra-EO pipeline"
+  },
+  {
+    "objectID": "consortium.html#software-used-in-hydra-eo-tutorials",
+    "href": "consortium.html#software-used-in-hydra-eo-tutorials",
+    "title": "Tools",
+    "section": "Software used in HYDRA-EO tutorials",
+    "text": "Software used in HYDRA-EO tutorials\nThis page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.\n\n\n\nR · ToolsRTM\n\n\nCanopy & leaf RTMs\nForward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.\nGitLab: ToolsRTM\n\n\n\n\nR · SCOPEinR\n\n\nEnergy balance & SIF\nInterface to the SCOPE model for canopy fluxes, temperature and fluorescence.\nGitLab: SCOPEinR\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”\n\n\nAction 1-12684.\n\n\nSource repository:  Hydra-EO pipeline"
+  },
+  {
+    "objectID": "documents.html",
+    "href": "documents.html",
+    "title": "Documents",
+    "section": "",
+    "text": "Section · Documentation"
+  },
+  {
+    "objectID": "documents.html#software-used-in-hydra-eo-tutorials",
+    "href": "documents.html#software-used-in-hydra-eo-tutorials",
+    "title": "Tools",
+    "section": "Software used in HYDRA-EO tutorials",
+    "text": "Software used in HYDRA-EO tutorials\nThis page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.\n\n\n\nR · ToolsRTM\n\n\nCanopy & leaf RTMs\nForward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.\nGitLab: ToolsRTM\n\n\n\n\nR · SCOPEinR\n\n\nEnergy balance & SIF\nInterface to the SCOPE model for canopy fluxes, temperature and fluorescence.\nGitLab: SCOPEinR\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”\n\n\nAction 1-12684.\n\n\nSource repository:  Hydra-EO pipeline"
+  },
+  {
+    "objectID": "pipeline.html#software-used-in-hydra-eo-tutorials",
+    "href": "pipeline.html#software-used-in-hydra-eo-tutorials",
+    "title": "Tools",
+    "section": "Software used in HYDRA-EO tutorials",
+    "text": "Software used in HYDRA-EO tutorials\nThis page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.\n\n\n\nR · ToolsRTM\n\n\nCanopy & leaf RTMs\nForward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.\nGitLab: ToolsRTM\n\n\n\n\nR · SCOPEinR\n\n\nEnergy balance & SIF\nInterface to the SCOPE model for canopy fluxes, temperature and fluorescence.\nGitLab: SCOPEinR\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”\n\n\nAction 1-12684.\n\n\nSource repository:  Hydra-EO pipeline"
+  },
+  {
+    "objectID": "pipeline.html#processing-pipelines-by-data-source",
+    "href": "pipeline.html#processing-pipelines-by-data-source",
+    "title": "Pipeline",
+    "section": "Processing pipelines by data source",
+    "text": "Processing pipelines by data source\nThis section documents key methodological blocks: radiative transfer configurations, trait retrieval strategies and disease scoring.\n\n\n\nUAV-airborne processing\n\n\nUAV & airborne processing\nRadiometric and geometric correction of UAV and airborne hyperspectral and thermal data, including mosaicking, BRDF normalisation, and co-registration with field plots. Output products include surface reflectance cubes, temperature maps, and quality masks.\n\n\n\n\nSatellite\n\n\nSatellite EO processing\nSentinel-2, PRISMA, and EnMAP workflows (e.g. Sen2Cor atmospheric correction, spectral resampling, tiling, and time-series aggregation), harmonised across sites for crop-stressor analysis and EO upscaling.\n\n\n\n\nRTM-ML\n\n\nRTM library & hybrid ML\nPROSAIL and SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, plant trait retrieval, and hybrid ML models trained on combined RTM–EO features for crop stress detection.\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”.\n\n\nAction 1-12684.\n\n\nSource repository:  HYDRA-EO pipeline"
+  },
+  {
+    "objectID": "documents.html#internal-docs-documentation-access",
+    "href": "documents.html#internal-docs-documentation-access",
+    "title": "Documents",
+    "section": "Internal docs & documentation access",
+    "text": "Internal docs & documentation access\nThis page provides access to internal documentation used within the HYDRA-EO project. The materials listed here are intended for consortium members and ESA partners and should not be shared outside the project unless explicitly approved.\n\n\n\nDocs\n\n\nMethodological documentation\nMethodological notes, protocol documents, and technical PDFs describing the processing pipelines, modelling assumptions, and analysis workflows developed within HYDRA-EO.\n\n\n\n\nField\n\n\nField manuals & protocols\nInternal field manuals covering disease scoring, sampling strategies, and experimental protocols used across crop trials (e.g. olive, pistachio, potato).\n\n\n\n\nESA\n\n\nMeetings & reporting\nMeeting minutes, internal presentations, and ESA reporting templates supporting project coordination, reviews, and contractual reporting.\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”.\n\n\nAction 1-12684.\n\n\nSource repository:  HYDRA-EO pipeline"
+  },
+  {
+    "objectID": "timeline.html#work-packages-across-the-project-timeline",
+    "href": "timeline.html#work-packages-across-the-project-timeline",
+    "title": "Work packages & timeline",
+    "section": "Work packages across the project timeline",
+    "text": "Work packages across the project timeline\nThis section links the HYDRA-EO work packages to the project schedule. As you scroll through the work package descriptions, the timeline marker highlights the corresponding project phase.\n\n\n&lt;div class=\"wp-timeline-marker\" id=\"wp-timeline-marker\"&gt;&lt;/div&gt;\n\n\n&lt;div class=\"wp-timeline-label active\" data-phase=\"phase1\"&gt;\n  &lt;div&gt;\n    Start-up&lt;br&gt;\n    &lt;span&gt;Jan–Jun 2026&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"wp-timeline-label\" data-phase=\"phase2\"&gt;\n  &lt;div&gt;\n    Core RTM &amp; ML&lt;br&gt;\n    &lt;span&gt;Jul 2026–Dec 2027&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"wp-timeline-label\" data-phase=\"phase3\"&gt;\n  &lt;div&gt;\n    Integration &amp; dissemination&lt;br&gt;\n    &lt;span&gt;Jan–Dec 2028&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n\n\n\n\nWP1\n\n\nProject coordination & requirements\n\n\nKick-off activities, refinement of user and science requirements, consolidation of case studies and experimental design. This phase sets the foundations for RTM configuration, data flows and hybrid ML strategies.\n\n\n\n\nWP2\n\n\nField campaigns & data collection\n\n\nCoordination of field spectroscopy, thermal imaging, UAV flights and in situ sampling across potato, olive, pistachio, citrus and grapevine trials.\n\n\n\n\nWP3\n\n\nRadiative transfer modelling\n\n\nConfiguration of PROSAIL, SCOPE and related RTMs; LUT generation and spectral resampling to Sentinel-2, PRISMA, EnMAP, FLEX/CHIME and LSTM.\n\n\n\n\nWP4\n\n\nHybrid ML inversion & scaling\n\n\nHybrid inversion schemes combining RTM simulations with machine learning to retrieve functional traits and analyse scaling effects.\n\n\n\n\nWP5\n\n\nIntegration, validation & EO tools\n\n\nCross-site validation, ESA mission scenarios and deployment of lightweight tools and tutorials for users.\n\n\n\n\nWP6\n\n\nDissemination & user engagement\n\n\nStakeholder engagement, ESA demonstrations and dissemination through workshops and open-source material."
+  },
+  {
+    "objectID": "timeline.html#project-timeline-work-packages",
+    "href": "timeline.html#project-timeline-work-packages",
+    "title": "Timeline",
+    "section": "Project timeline & work packages",
+    "text": "Project timeline & work packages\n\n\n\n  \n    \n      Start-up\n      Jan–Jun 2026\n    \n    \n  \n\n\n    \n     Aerial & Field campaigns\n      May–Sept 2026\n    \n    \n  \n  \n    \n      Core RTM & ML\n      Jul 2026–Dec 2027\n    \n    \n  \n\n  \n    \n      Integration & dissemination\n      Jan–Jun 2028\n    \n    \n  \n\n\n\n\nThis section summarises the HYDRA-EO work packages (WPs), outlining their scope, role, and position within the overall project timeline. Each work package contributes a specific set of activities—ranging from scientific requirements and data collection to modelling, integration, and dissemination—together forming a coherent end-to-end workflow.\n\n\n\nWP1\n\n\nScientific requirement consolidation\nDefinition of scientific objectives, use cases, trait–stressor matrix, and alignment with ESA requirements and parallel EU initiatives.\n\n\n\n\nWP2\n\n\nDataset collection\nField campaigns, UAV and airborne acquisitions, in-situ measurements, and harmonised dataset documentation across crops and sites.\n\n\n\n\nWP3\n\n\nModel development & validation\nDevelopment and validation of RTMs and EO-based models, including spectral sensitivity and sensor intercomparison.\n\n\n\n\nWP4\n\n\nExperimental dataset generation\nGeneration of experimental EO products, synthetic datasets, and stress-specific simulation libraries.\n\n\n\n\nWP5\n\n\nEarth system science exploitation\nAnalysis of functional traits, stress dynamics, and scaling from UAV to satellite EO products.\n\n\n\n\nWP6\n\n\nSocietal relevance & transfer\nDemonstration of applicability for agriculture, disease monitoring, and resilience, including stakeholder-oriented outputs.\n\n\n\n\nWP7\n\n\nScientific roadmap\nIdentification of knowledge gaps and recommendations for future EO missions (CHIME, FLEX, LSTM).\n\n\n\n\nWP8\n\n\nScientific collaboration\nCoordination with ESA activities and relevant Horizon Europe projects.\n\n\n\n\nWP9\n\n\nPromotion & dissemination\nScientific communication, training material, workshops, and outreach activities.\n\n\n\n\nWP10\n\n\nProject management\nOverall coordination, reporting, risk management, and contractual compliance.\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\n\n\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”.\n\n\nAction 1-12684.\n\n\nSource repository:  HYDRA-EO pipeline"
+  }
+]

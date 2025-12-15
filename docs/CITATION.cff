@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use HYDRA‑EO, please cite it."
+title: "HYDRA‑EO: Hybrid ML and RTMs for multi-stressor crop disease detection"
+authors:
+  - family-names: Camino
+    given-names: Carlos
+date-released: 2025-09-14
+version: "0.1.0"
