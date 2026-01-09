@@ -96,7 +96,10 @@ img {
   font-weight: 400;
   color: var(--text-muted);
   letter-spacing: 0.04em;
+  margin-left: 140px;   /* 120px logo + padding */
 }
+
+
 
 .nav-links {
   display: flex;
@@ -212,14 +215,24 @@ img {
   height: auto;            /* Keeps original aspect ratio */  opacity: 0.95;           /* Slight transparency for a smooth look */
 }
 /* ESA logo fixed on top-left of the navbar */
+/* Ensure the container is the positioning reference */
+.nav-container {
+  position: relative;
+}
+
+/* ESA logo fixed inside navbar (always same size/position) */
 .esa-logo-fixed {
   position: absolute;
-  top: 50%;              /* vertically centered in the navbar */
-  left: 150px;            /* distance from left edge */
+  top: 50%;
+  left: 20px;
   transform: translateY(-50%);
-  width: 120px;           /* adjust size as you like */
-  height: auto9
+  width: 120px;
+  height: auto;          /* <- FIX: was auto9 */
+  opacity: 0.95;
+  z-index: 2000;
+  pointer-events: none;  /* optional: avoids accidental clicks */
 }
+
 
 /* Optional: Extra-small logo */
 .esa-logo.small .esa-logo-img {
@@ -236,9 +249,12 @@ img {
   .esa-logo-img {
     width: 90px;           /* Smaller logo on phones */
   }
-    .esa-logo-fixed {
+  .esa-logo-fixed {
     width: 32px;   /* smaller ESA logo in mobile */
     left: 12px;    /* optional: bring slightly closer to edge */
+  }
+  .nav-logo {
+    margin-left: 140px;
   }
 }
 
@@ -799,7 +815,7 @@ footer {
   <div class="nav-container">
      <img src="assets/ESA_logo_2020_Deep.png" alt="ESA logo" class="esa-logo-fixed">
     <div class="nav-logo">
-      HYDRA-EO project
+      <span> HYDRA-EO project</span>
       <span>Pipelines &amp; methods</span>
     </div>
 
