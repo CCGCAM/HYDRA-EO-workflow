@@ -5,11 +5,9 @@ format: html
 
 <div class="section-label">Section · Documentation</div>
 
-## Internal docs & documentation access
+## Official docs & documentation access
 
-This page provides access to internal documentation used within the HYDRA-EO project.
-The materials listed here are intended for consortium members and ESA partners and
-should not be shared outside the project unless explicitly approved.
+This page provides access to official documentation related to the HYDRA-EO project, including code, processing pipelines, and technical resources.The materials listed here are publicly available and intended for open dissemination, unless explicitly stated otherwise.
 
 ::: {.card-grid}
 
@@ -27,7 +25,7 @@ pipelines, modelling assumptions, and analysis workflows developed within HYDRA-
 
 ### Field manuals & protocols
 
-Internal field manuals covering disease scoring, sampling strategies, and experimental
+Official field manuals covering disease scoring, sampling strategies, and experimental
 protocols used across crop trials (e.g. olive, pistachio, potato).
 :::
 
