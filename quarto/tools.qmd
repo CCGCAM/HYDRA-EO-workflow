@@ -1,45 +1,87 @@
 ---
 title: "Tools"
 format: html
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-<div class="section-label">Section · Tools</div>
+::: section-label
+Section · Tools
+:::
 
 ## Software used in HYDRA-EO tutorials
 
-This page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.
+This page summarises the core software tools and R packages used
+throughout the HYDRA-EO tutorials. These tools support radiative
+transfer modelling, energy balance simulations, and hybrid approaches
+for vegetation trait retrieval, disease detection, and ecosystem
+monitoring.
 
-::: {.card-grid}
+------------------------------------------------------------------------
 
-::: {.vbl-card}
-<div class="pill-mini">R · ToolsRTM</div>
-### Canopy & leaf RTMs
-Forward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.  
-GitLab: <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank" rel="noopener">ToolsRTM</a>
+::::::: card-grid
+:::: vbl-card
+::: pill-mini
+R · Radiative transfer
 :::
 
-::: {.vbl-card}
-<div class="pill-mini">R · SCOPEinR</div>
+### ToolsRTM
 
-### Energy balance & SIF
+**ToolsRTM** is an R package developed within HYDRA-EO to support
+forward radiative transfer simulations at leaf and canopy level. It
+provides implementations and wrappers for widely used RTMs, enabling
+consistent simulation of reflectance and fluorescence across multiple
+sensors.
 
-Interface to the SCOPE model for canopy fluxes, temperature and fluorescence.  
-GitLab: <a href="https://gitlab.com/caminoccg/scopeinr" target="_blank" rel="noopener">SCOPEinR</a>
+Main capabilities include PROSAIL-based canopy reflectance simulations,
+band convolution to satellite spectral response functions, and
+harmonisation across multispectral and hyperspectral platforms.
+
+-   Forward simulations of **PROSAIL**, **INFORM**, **SPART**, and
+    **MARMIT**
+-   Sensor-specific band aggregation
+-   Designed for teaching, prototyping, and research workflows
+
+**Repository:**\
+<https://gitlab.com/caminoccg/toolsrtm>
+::::
+
+:::: vbl-card
+::: pill-mini
+R · Energy balance & SIF
 :::
 
+### SCOPEinR
+
+**SCOPEinR** provides an R interface to the SCOPE model, allowing users
+to simulate canopy energy balance, photosynthesis, land surface
+temperature, and sun-induced fluorescence (SIF) in a reproducible and
+scriptable environment.
+
+Within HYDRA-EO tutorials, SCOPEinR is used to link radiative transfer
+with physiological processes and flux-related variables, supporting the
+interpretation of hyperspectral and thermal observations.
+
+-   Canopy energy balance and flux simulations
+-   Temperature and SIF modelling
+-   Integration with RTM-based and machine learning workflows
+
+**Repository:**\
+<https://gitlab.com/caminoccg/scopeinr>
+::::
+:::::::
+
+------------------------------------------------------------------------
+
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
 :::
 
-
-  <div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2026 HYDRA-EO.</p>
-  <p class="mb-2">HYDRA-EO is funded by the European Space Agency (ESA) 
-    under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”</p>
-  <p class="mb-3">Action 1-12684.</p>
-  <p class="mb-4">
-    Source repository:
-    <a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
-      HYDRA-EO pipeline
-    </a>
-  </p>
-</div>
+© 2026 **HYDRA-EO**.\
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
+Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
+**1-12684**.\
+![](images/GitHub-Logo.png){.footer-logo}
+[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+::::

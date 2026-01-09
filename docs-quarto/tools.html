@@ -154,49 +154,56 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="section-label">
-Section · Tools
+<p>Section · Tools</p>
 </div>
 <section id="software-used-in-hydra-eo-tutorials" class="level2">
 <h2 class="anchored" data-anchor-id="software-used-in-hydra-eo-tutorials">Software used in HYDRA-EO tutorials</h2>
-<p>This page summarises the main R packages and tools used in the tutorials, with links to their Git repositories and simple usage examples.</p>
+<p>This page summarises the core software tools and R packages used throughout the HYDRA-EO tutorials. These tools support radiative transfer modelling, energy balance simulations, and hybrid approaches for vegetation trait retrieval, disease detection, and ecosystem monitoring.</p>
+<hr>
 <div class="card-grid">
 <div class="vbl-card">
 <div class="pill-mini">
-R · ToolsRTM
+<p>R · Radiative transfer</p>
 </div>
-<section id="canopy-leaf-rtms" class="level3">
-<h3 class="anchored" data-anchor-id="canopy-leaf-rtms">Canopy &amp; leaf RTMs</h3>
-<p>Forward simulations of PROSAIL, INFORM, SPART and MARMIT at satellite band resolution.<br>
-GitLab: <a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank" rel="noopener">ToolsRTM</a></p>
+<section id="toolsrtm" class="level3">
+<h3 class="anchored" data-anchor-id="toolsrtm">ToolsRTM</h3>
+<p><strong>ToolsRTM</strong> is an R package developed within HYDRA-EO to support forward radiative transfer simulations at leaf and canopy level. It provides implementations and wrappers for widely used RTMs, enabling consistent simulation of reflectance and fluorescence across multiple sensors.</p>
+<p>Main capabilities include PROSAIL-based canopy reflectance simulations, band convolution to satellite spectral response functions, and harmonisation across multispectral and hyperspectral platforms.</p>
+<ul>
+<li>Forward simulations of <strong>PROSAIL</strong>, <strong>INFORM</strong>, <strong>SPART</strong>, and <strong>MARMIT</strong></li>
+<li>Sensor-specific band aggregation</li>
+<li>Designed for teaching, prototyping, and research workflows</li>
+</ul>
+<p><strong>Repository:</strong><br>
+<a href="https://gitlab.com/caminoccg/toolsrtm" class="uri">https://gitlab.com/caminoccg/toolsrtm</a></p>
 </section>
 </div>
 <div class="vbl-card">
 <div class="pill-mini">
-R · SCOPEinR
+<p>R · Energy balance &amp; SIF</p>
 </div>
-<section id="energy-balance-sif" class="level3">
-<h3 class="anchored" data-anchor-id="energy-balance-sif">Energy balance &amp; SIF</h3>
-<p>Interface to the SCOPE model for canopy fluxes, temperature and fluorescence.<br>
-GitLab: <a href="https://gitlab.com/caminoccg/scopeinr" target="_blank" rel="noopener">SCOPEinR</a></p>
+<section id="scopeinr" class="level3">
+<h3 class="anchored" data-anchor-id="scopeinr">SCOPEinR</h3>
+<p><strong>SCOPEinR</strong> provides an R interface to the SCOPE model, allowing users to simulate canopy energy balance, photosynthesis, land surface temperature, and sun-induced fluorescence (SIF) in a reproducible and scriptable environment.</p>
+<p>Within HYDRA-EO tutorials, SCOPEinR is used to link radiative transfer with physiological processes and flux-related variables, supporting the interpretation of hyperspectral and thermal observations.</p>
+<ul>
+<li>Canopy energy balance and flux simulations</li>
+<li>Temperature and SIF modelling</li>
+<li>Integration with RTM-based and machine learning workflows</li>
+</ul>
+<p><strong>Repository:</strong><br>
+<a href="https://gitlab.com/caminoccg/scopeinr" class="uri">https://gitlab.com/caminoccg/scopeinr</a></p>
 </section>
 </div>
 </div>
+<hr>
 <div class="text-center small text-secondary vbl-footer-classic">
 <div class="vbl-footer-line">
 
 </div>
-<p class="mb-1">
-© 2026 HYDRA-EO.
-</p>
-<p class="mb-2">
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”
-</p>
-<p class="mb-3">
-Action 1-12684.
-</p>
-<p class="mb-4">
-Source repository: <a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener"> HYDRA-EO pipeline </a>
-</p>
+<p>© 2026 <strong>HYDRA-EO</strong>.<br>
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender <em>“Crop Multiple Stressors, Pests and Diseases”</em>. Action <strong>1-12684</strong>.<br>
+<img src="images/GitHub-Logo.png" class="footer-logo img-fluid"> <a href="https://github.com/CCGCAM/HYDRA-EO-workflow/">HYDRA-EO-Workflow</a></p>
 </div>
 
 

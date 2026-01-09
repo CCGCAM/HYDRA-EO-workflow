@@ -3,7 +3,10 @@ title: "Timeline"
 format: html
 ---
 
-<div class="section-label">Section · Timeline</div>
+::: section-label
+Section · Timeline
+:::
+
 
 ## Project timeline & work packages
 
@@ -133,18 +136,15 @@ Overall coordination, reporting, risk management, and contractual compliance.
 
 :::
 
-<div class="text-center small text-secondary vbl-footer-classic">
-  <div class="vbl-footer-line"></div>
-  <p class="mb-1">© 2026 HYDRA-EO.</p>
-  <p class="mb-2">
-    HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
-    “Crop Multiple Stressors, Pests and Diseases”.
-  </p>
-  <p class="mb-3">Action 1-12684.</p>
-  <p class="mb-4">
-    Source repository:
-    <a href="https://ccgcam.github.io/HydraEO/index.html" target="_blank" rel="noopener">
-      HYDRA-EO pipeline
-    </a>
-  </p>
-</div>
+
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
+:::
+
+© 2026 **HYDRA-EO**.\
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
+Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
+**1-12684**.\
+![](images/GitHub-Logo.png){.footer-logo}
+[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+::::

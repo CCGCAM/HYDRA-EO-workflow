@@ -3,7 +3,9 @@ title: "Pipeline"
 format: html
 ---
 
-<div class="section-label">Section · Pipeline</div>
+::: section-label
+Section · Pipeline
+:::
 
 ## Processing pipelines by data source
 
@@ -43,24 +45,18 @@ for crop stress detection.
 
 :::
 
-<div class="text-center small text-secondary vbl-footer-classic">
 
-<div class="vbl-footer-line"></div>
+------------------------------------------------------------------------
 
-<p class="mb-1">© 2026 HYDRA-EO.</p>
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
+:::
 
-<p class="mb-2">
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
-“Crop Multiple Stressors, Pests and Diseases”.
-</p>
+© 2026 **HYDRA-EO**.\
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
+Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
+**1-12684**.\
+![](images/GitHub-Logo.png){.footer-logo}
+[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+::::
 
-<p class="mb-3">Action 1-12684.</p>
-
-<p class="mb-4">
-Source repository:
-<a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
-HYDRA-EO pipeline
-</a>
-</p>
-
-</div>

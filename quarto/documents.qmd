@@ -3,7 +3,9 @@ title: "Documents"
 format: html
 ---
 
-<div class="section-label">Section · Documentation</div>
+::: section-label
+Section · Documentations
+:::
 
 ## Official docs & documentation access
 
@@ -12,7 +14,9 @@ This page provides access to official documentation related to the HYDRA-EO proj
 ::: {.card-grid}
 
 ::: {.vbl-card}
-<div class="pill-mini">Docs</div>
+::: pill-mini
+Docs
+:::
 
 ### Methodological documentation
 
@@ -21,8 +25,9 @@ pipelines, modelling assumptions, and analysis workflows developed within HYDRA-
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">Field</div>
-
+::: pill-mini
+Fields
+:::
 ### Field manuals & protocols
 
 Official field manuals covering disease scoring, sampling strategies, and experimental
@@ -30,8 +35,9 @@ protocols used across crop trials (e.g. olive, pistachio, potato).
 :::
 
 ::: {.vbl-card}
-<div class="pill-mini">ESA</div>
-
+::: pill-mini
+ESA
+:::
 ### Meetings & reporting
 
 Meeting minutes, internal presentations, and ESA reporting templates supporting
@@ -40,24 +46,17 @@ project coordination, reviews, and contractual reporting.
 
 :::
 
-<div class="text-center small text-secondary vbl-footer-classic">
 
-<div class="vbl-footer-line"></div>
+------------------------------------------------------------------------
 
-<p class="mb-1">© 2026 HYDRA-EO.</p>
+:::: {.text-center .small .text-secondary .vbl-footer-classic}
+::: vbl-footer-line
+:::
 
-<p class="mb-2">
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender
-“Crop Multiple Stressors, Pests and Diseases”.
-</p>
-
-<p class="mb-3">Action 1-12684.</p>
-
-<p class="mb-4">
-Source repository:
-<a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
-HYDRA-EO pipeline
-</a>
-</p>
-
-</div>
+© 2026 **HYDRA-EO**.\
+HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
+Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
+**1-12684**.\
+![](images/GitHub-Logo.png){.footer-logo}
+[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+::::
