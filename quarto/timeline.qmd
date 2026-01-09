@@ -143,7 +143,7 @@ Overall coordination, reporting, risk management, and contractual compliance.
   <p class="mb-3">Action 1-12684.</p>
   <p class="mb-4">
     Source repository:
-    <a href="https://ccgcam.github.io/HydraEO/" target="_blank" rel="noopener">
+    <a href="https://ccgcam.github.io/HydraEO/index.html" target="_blank" rel="noopener">
       HYDRA-EO pipeline
     </a>
   </p>
