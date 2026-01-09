@@ -83,6 +83,7 @@ PROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, p
 HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
 Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
 **1-12684**.\
-![](images/GitHub-Logo.png){.footer-logo}
-[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+![](images/GitHub-Logo.png){.footer-logo width=80px}[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+
+
 ::::
