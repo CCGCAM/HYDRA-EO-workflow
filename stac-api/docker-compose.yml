@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: pgstac
+      POSTGRES_PASSWORD: pgstac
+      POSTGRES_DB: pgstac
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgstac:
+    # PgSTAC lives "in the database", but we need to install it.
+    # We'll do the installation from the API container on startup.
+    image: ghcr.io/stac-utils/stac-fastapi-pgstac:latest
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://pgstac:pgstac@db:5432/pgstac
+    entrypoint: ["/bin/sh","-lc"]
+    command: >
+      "python -c 'print(\"PgSTAC install handled by stac-fastapi container\")' && sleep infinity"
+
+  api:
+    image: ghcr.io/stac-utils/stac-fastapi-pgstac:latest
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://pgstac:pgstac@db:5432/pgstac
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8081
+    ports:
+      - "8081:8081"
+
+volumes:
+  pgdata:
