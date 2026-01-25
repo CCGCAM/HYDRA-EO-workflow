@@ -3,7 +3,9 @@
 .RData
 .Ruserdata
 ## remove mac files
+*.DS_Store
 .DS_Store
+**/.DS_Store
 ._*
 # exclude everything in folders
 
