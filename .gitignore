@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 ## remove mac files
-*.DS_Store
+.DS_Store
 .DS_Store
 **/.DS_Store
 ._*
@@ -12,3 +12,5 @@
 *.zip
 *.nc
 *.RDataTmp*
+.DS_Store
+**/.DS_Store
