@@ -2,3 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
+## remove mac files
+.DS_Store
+._*
+# exclude everything in folders
+
+*.zip
+*.nc
+*.RDataTmp*
