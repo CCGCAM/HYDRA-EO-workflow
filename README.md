@@ -40,7 +40,7 @@ HYDRA-EO delivers open and reproducible resources that can be directly reused by
 ```         
 HYDRA‑EO/
 ├─ assets/                # images, figures (place logo.png here)
-├─ info/                  # call text, proposal PDFs, partner info
+├─ info/                  # call text, proposal PDFs, partner info (now empty)
 ├─ apps/                  # Shiny apps
 ├─ scripts/               # reusable code (R / Python)
 │  ├─ R/
