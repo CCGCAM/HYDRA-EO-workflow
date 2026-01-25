@@ -2,50 +2,48 @@
   "stac_version": "1.0.0",
   "type": "Collection",
   "id": "hydraeo_prototype",
-  "title": "Prototype - HYDRA-EO Site",
-  "description": "Prototype collection for HYDRA-EO. This collection is used to validate the STAC structure and metadata conventions before creating one collection per sensor × site (e.g., EnMAP, PRISMA, UAV hyperspectral cameras, thermal) and ingesting real acquisitions and field observations.",
+  "title": "Prototype",
+  "description": "Prototype collection used to validate STAC conventions before operational ingestion.",
   "license": "CC-BY-4.0",
   "keywords": [
     "HYDRA-EO",
-    "prototype",
     "crop-stress",
     "disease",
-    "remote-sensing",
     "STAC"
-  ],
-  "providers": [
-    {
-      "name": "Wageningen University & Research (WUR)",
-      "roles": ["producer", "processor", "host"]
-    }
   ],
   "extent": {
     "spatial": {
       "bbox": [
-        [5.70, 52.24, 5.78, 52.28]
+        [5.7, 52.24, 5.78, 52.28]
       ]
     },
     "temporal": {
       "interval": [
-        ["2024-01-01T00:00:00Z", "2026-12-31T23:59:59Z"]
+        ["2024-01-01 00:00:00", "2026-12-31 23:59:59"]
       ]
     }
   },
   "summaries": {
-    "platform": ["uav", "airborne", "satellite"],
-    "instruments": ["prototype"],
-    "hydra:site_id": ["HYDRA-EO Site"],
-    "hydra:sensor_family": ["hyperspectral", "thermal", "multispectral"],
-    "hydra:crop": ["unknown"],
-    "hydra:disease_name": ["unknown"],
-    "hydra:assessment_method": ["visual", "lab", "model"],
-    "hydra:has_field_data": [true, false],
-    "hydra:field_measurements": [
-      "LAI",
-      "Chl",
-      "leaf_temperature",
-      "SIF",
-      "visual_disease_score"
+    "platform": "unknown",
+    "instruments": "prototype",
+    "hydra:site_id": [
+      "NL-Loo"
+    ],
+    "hydra:sensor_family": "prototype",
+    "hydra:crop": [
+      "olive"
+    ],
+    "hydra:has_field_data": [
+      true,
+      false
+    ],
+    "hydra:disease_name": [
+      "unknown"
+    ],
+    "hydra:assessment_method": [
+      "visual",
+      "lab",
+      "model"
     ]
   },
   "stac_extensions": [

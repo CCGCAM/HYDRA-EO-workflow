@@ -17,6 +17,12 @@
     },
     {
       "rel": "child",
+      "href": "./collections/hydraeo_prototype/collection.json",
+      "type": "application/json",
+      "title": "Prototype"
+    },
+    {
+      "rel": "child",
       "href": "./collections/hydraeo_prototype_nl-loo/collection.json",
       "type": "application/json",
       "title": "Prototype - NL-Loo"
