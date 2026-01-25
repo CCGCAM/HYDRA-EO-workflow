@@ -46,6 +46,7 @@ HYDRA‑EO/
 │  ├─ R/
 │  └─ python/
 ├─ notebooks/             # exploration, tutorials, reports
+├─ stac/.                 # stac collections (e.g., aerial campaigns)
 ├─ data/                  # (empty) pointers & README on data policy
 │  ├─ raw/                # raw acquisitions (not tracked)
 │  ├─ interim/            # intermediate products
