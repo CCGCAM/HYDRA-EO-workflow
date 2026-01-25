@@ -17,9 +17,69 @@
     },
     {
       "rel": "child",
-      "href": "./collections/hydraeo_prototype/collection.json",
+      "href": "./collections/hydraeo_prototype_nl-loo/collection.json",
       "type": "application/json",
-      "title": "Prototype - HYDRA-EO Site"
+      "title": "Prototype - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_nano_vnir_uav_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "Nano VNIR Headwall (UAV) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_nano_vnir_swir_uav_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "Nano VNIR+SWIR Headwall (UAV) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_vnir_aircraft_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "VNIR Headwall (Aircraft) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_vnir_swir_aircraft_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "VNIR+SWIR Headwall (Aircraft) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_thermal_nano_uav_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "Nano Thermal (UAV) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_enmap_satellite_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "EnMAP (Satellite) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_prisma_satellite_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "PRISMA (Satellite) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_nano_vnir_uav_nl-loo/collection.json",
+      "type": "application/json",
+      "title": "Nano VNIR Headwall (UAV) - NL-Loo"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_nano_vnir_uav_es-CR/collection.json",
+      "type": "application/json",
+      "title": "Nano VNIR Headwall (UAV) - ES-Valencia"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_headwall_nano_vnir_uav_it-sr/collection.json",
+      "type": "application/json",
+      "title": "Nano VNIR Headwall (UAV) - IT-SR"
     }
   ]
 }
