@@ -1,0 +1,25 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Catalog",
+  "id": "hydraeo",
+  "title": "HYDRA-EO STAC Catalog",
+  "description": "STAC catalog for the HYDRA-EO project. Datasets are organized as collections by sensor and site. Items represent individual acquisitions (date/time) and reference EO assets (e.g., COG GeoTIFF) and field data tables stored externally.",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/hydraeo_prototype/collection.json",
+      "type": "application/json",
+      "title": "Prototype - HYDRA-EO Site"
+    }
+  ]
+}
