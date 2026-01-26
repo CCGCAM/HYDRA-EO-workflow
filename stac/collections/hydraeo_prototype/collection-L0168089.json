@@ -1,0 +1,72 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "hydraeo_prototype",
+  "title": "Prototype",
+  "description": "Prototype collection used to validate STAC conventions before operational ingestion.",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "HYDRA-EO",
+    "crop-stress",
+    "disease",
+    "STAC"
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [5.7, 52.24, 5.78, 52.28]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        ["2024-01-01 00:00:00", "2026-12-31 23:59:59"]
+      ]
+    }
+  },
+  "summaries": {
+    "platform": "unknown",
+    "instruments": "prototype",
+    "hydra:site_id": [
+      "NL-Loo"
+    ],
+    "hydra:sensor_family": "prototype",
+    "hydra:crop": [
+      "olive"
+    ],
+    "hydra:has_field_data": [
+      true,
+      false
+    ],
+    "hydra:disease_name": [
+      "unknown"
+    ],
+    "hydra:assessment_method": [
+      "visual",
+      "lab",
+      "model"
+    ]
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json"
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    }
+  ]
+}
