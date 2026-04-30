@@ -1,9 +1,12 @@
-This folder contains raw, unprocessed data as acquired from different platforms.
+This folder contains in-situ field measurements collected during campaigns.
 
-Levels include:
-- Satellite data (e.g., Sentinel-2, EnMAP, PRISMA)
-- Airborne and UAV data
-- Field measurements
-- metadata: GPS coordinates, flight data,vector files etc..
+Subfolders include:
+- visual_scoring/: disease severity assessments
+- leaf_physiology/: physiological measurements (e.g., gas exchange)
+- biochemistry/: pigment and nutrient analysis
+- qpcr/: pathogen detection (e.g., Xylella fastidiosa)
+- genomics/: molecular and sequencing data
+- calibration/: spectroradiometers measurements
 
-All datasets are stored in their original format and should not be modified.
+
+These datasets are used for validation and model calibration.
