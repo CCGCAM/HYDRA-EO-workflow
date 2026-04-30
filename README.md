@@ -46,11 +46,12 @@ HYDRA‑EO/
 │  ├─ R/
 │  └─ python/
 ├─ notebooks/             # exploration, tutorials, reports
-├─ stac/.                 # stac collections (e.g., aerial campaigns)
+├─ stac/                  # stac collections (e.g., aerial campaigns)
 ├─ data/                  # (empty) pointers & README on data policy
 │  ├─ raw/                # raw acquisitions (not tracked)
 │  ├─ interim/            # intermediate products
 │  └─ processed/          # final products / examples
+│  └─ matchup/            # spatio-temporal matchups between datasets
 ├─ docs/                  # methods, specs, templates
 └─ routemap/              # milestones, deliverables, KPIs
 ```
