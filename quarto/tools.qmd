@@ -1,87 +1,175 @@
 ---
 title: "Tools"
+description: "R, Python and interactive tools used by HYDRA-EO."
 format: html
-editor: 
-  markdown: 
+editor:
+  markdown:
     wrap: 72
 ---
 
-::: section-label
-Section · Tools
+::: {.section-label}
+Section · Open tools
 :::
 
-## Software used in HYDRA-EO tutorials
+## Software ecosystem for HYDRA-EO
 
-This page summarises the core software tools and R packages used
-throughout the HYDRA-EO tutorials. These tools support radiative
-transfer modelling, energy balance simulations, and hybrid approaches
-for vegetation trait retrieval, disease detection, and ecosystem
-monitoring.
+HYDRA-EO uses and extends the **RTM-Suite** ecosystem: coordinated R and
+Python implementations for radiative transfer modelling, sensor convolution,
+trait inversion and interactive exploration. Use the links below to move
+directly between source code, reference documentation and tutorials.
+
+::: {.hero-tags}
+::: {.pill-mini}
+Leaf · canopy · soil
+:::
+::: {.pill-mini}
+Reflectance · SIF · thermal
+:::
+::: {.pill-mini}
+Sensor convolution
+:::
+::: {.pill-mini}
+ML & deep learning
+:::
+:::
+
+[**Explore the complete RTM-Suite →**](https://ccgcam.github.io/RTM-Suite/){.tools-main-link target="_blank"}
 
 ------------------------------------------------------------------------
 
-::::::: card-grid
-:::: vbl-card
-::: pill-mini
-R · Radiative transfer
-:::
+## R packages
+
+::::::: {.card-grid}
+:::: {.vbl-card .tool-card-r}
+::: {.tool-heading}
+![](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white){alt="R"}
 
 ### ToolsRTM
-
-**ToolsRTM** is an R package developed within HYDRA-EO to support
-forward radiative transfer simulations at leaf and canopy level. It
-provides implementations and wrappers for widely used RTMs, enabling
-consistent simulation of reflectance and fluorescence across multiple
-sensors.
-
-Main capabilities include PROSAIL-based canopy reflectance simulations,
-band convolution to satellite spectral response functions, and
-harmonisation across multispectral and hyperspectral platforms.
-
--   Forward simulations of **PROSAIL**, **INFORM**, **SPART**, and
-    **MARMIT**
--   Sensor-specific band aggregation
--   Designed for teaching, prototyping, and research workflows
-
-**Repository:**\
-<https://gitlab.com/caminoccg/toolsrtm>
-::::
-
-:::: vbl-card
-::: pill-mini
-R · Energy balance & SIF
 :::
 
+Leaf, canopy and soil radiative transfer models, LUT generation, sensor
+convolution and trait inversion. It includes PROSPECT, FLUSPECT, Liberty,
+fourSAIL, foursail2, INFORM, MARMIT and SPART workflows.
+
+- [![](https://img.shields.io/badge/GitLab-Source-FC6D26?logo=gitlab&logoColor=white){alt="GitLab source"}](https://gitlab.com/caminoccg/toolsrtm){target="_blank"}
+- [![](https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&logoColor=white){alt="Reference documentation"}](https://ccgcam.github.io/RTM-Suite/toolsrtm/){target="_blank"}
+- [R tutorials →](https://ccgcam.github.io/RTM-Suite/tutorials-overview.html){target="_blank"}
+::::
+
+:::: {.vbl-card .tool-card-r}
+::: {.tool-heading}
+![](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white){alt="R"}
+
 ### SCOPEinR
+:::
 
-**SCOPEinR** provides an R interface to the SCOPE model, allowing users
-to simulate canopy energy balance, photosynthesis, land surface
-temperature, and sun-induced fluorescence (SIF) in a reproducible and
-scriptable environment.
+R interface to SCOPE for coupled canopy radiative transfer,
+photosynthesis, energy balance, land-surface temperature and sun-induced
+chlorophyll fluorescence (SIF).
 
-Within HYDRA-EO tutorials, SCOPEinR is used to link radiative transfer
-with physiological processes and flux-related variables, supporting the
-interpretation of hyperspectral and thermal observations.
+- [![](https://img.shields.io/badge/GitLab-Source-FC6D26?logo=gitlab&logoColor=white){alt="GitLab source"}](https://gitlab.com/caminoccg/scopeinr){target="_blank"}
+- [![](https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&logoColor=white){alt="Reference documentation"}](https://ccgcam.github.io/RTM-Suite/scopeinr/){target="_blank"}
+- [R tutorials →](https://ccgcam.github.io/RTM-Suite/tutorials-overview.html#scopeinr){target="_blank"}
+::::
+:::::::
 
--   Canopy energy balance and flux simulations
--   Temperature and SIF modelling
--   Integration with RTM-based and machine learning workflows
+## Python libraries
 
-**Repository:**\
-<https://gitlab.com/caminoccg/scopeinr>
+::::::: {.card-grid}
+:::: {.vbl-card .tool-card-python}
+::: {.tool-heading}
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white){alt="Python"}
+
+### toolsrtm
+:::
+
+Python port of the ToolsRTM core, including leaf and canopy models, spectral
+indices, sensor convolution, STAC satellite retrieval and classical and deep
+learning inversion.
+
+- [![](https://img.shields.io/badge/GitHub-Source-181717?logo=github&logoColor=white){alt="GitHub source"}](https://github.com/CCGCAM/ToolsRTMinPython){target="_blank"}
+- [![](https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&logoColor=white){alt="Reference documentation"}](https://ccgcam.github.io/RTM-Suite/#docs){target="_blank"}
+- [Python tutorials →](https://ccgcam.github.io/RTM-Suite/tutorials-python.html){target="_blank"}
+::::
+
+:::: {.vbl-card .tool-card-python}
+::: {.tool-heading}
+![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white){alt="Python"}
+
+### scopeinpython
+:::
+
+Python implementation of the SCOPE workflow for batch simulations of
+reflectance, fluorescence, photosynthesis, temperature and energy-balance
+outputs.
+
+- [![](https://img.shields.io/badge/GitHub-Source-181717?logo=github&logoColor=white){alt="GitHub source"}](https://github.com/CCGCAM/RTM-Suite/tree/main/SCOPEinPython){target="_blank"}
+- [![](https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&logoColor=white){alt="Reference documentation"}](https://ccgcam.github.io/RTM-Suite/#docs){target="_blank"}
+- [Python tutorials →](https://ccgcam.github.io/RTM-Suite/tutorials-python.html#scopeinpython){target="_blank"}
+::::
+:::::::
+
+## Interactive applications
+
+::: {.vbl-card .tool-card-app}
+::: {.tool-heading}
+![](https://img.shields.io/badge/R_Shiny-Interactive-1F77B4?logo=rstudio&logoColor=white){alt="R Shiny"}
+
+### ToolsRTM.app
+:::
+
+Nine point-and-click Shiny applications expose PROSAIL, PROSAIL-BRDF,
+MARMIT, SPART, SCOPE, LUT generation, RTM comparison, inversion and STAC
+workflows. In R, launch them through `ToolsRTM::get.simulator()`.
+
+- [![](https://img.shields.io/badge/GitHub-Apps-181717?logo=github&logoColor=white){alt="Apps on GitHub"}](https://github.com/CCGCAM/RTM-Suite/tree/main/ToolsRTM.app){target="_blank"}
+- [Applications and screenshots →](https://ccgcam.github.io/RTM-Suite/#apps){target="_blank"}
+- [Examples and copy-ready code →](https://ccgcam.github.io/RTM-Suite/#examples){target="_blank"}
+:::
+
+------------------------------------------------------------------------
+
+## Documentation hub
+
+::::::: {.card-grid}
+:::: {.vbl-card}
+### Choose a language
+
+Compare equivalent implementations, installation options and supported
+models before selecting an R or Python workflow.
+
+[R versus Python →](https://ccgcam.github.io/RTM-Suite/comparison.html){target="_blank"}
+::::
+
+:::: {.vbl-card}
+### Learn by example
+
+Follow verified tutorials with generated figures, from basic simulations to
+sensor convolution, SCOPE and trait inversion.
+
+[R tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-overview.html){target="_blank"} ·
+[Python tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-python.html){target="_blank"}
+::::
+
+:::: {.vbl-card}
+### Connect to HYDRA-EO
+
+See how these tools support the project's hybrid RTM–ML pipeline for
+multi-stressor crop monitoring across UAV, airborne and satellite scales.
+
+[HYDRA-EO project site →](https://hydra-eo.eu/#tools){target="_blank"}
 ::::
 :::::::
 
 ------------------------------------------------------------------------
 
 :::: {.text-center .small .text-secondary .vbl-footer-classic}
-::: vbl-footer-line
+::: {.vbl-footer-line}
 :::
 
-© 2026 **HYDRA-EO**.\
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+
-Tender *“Crop Multiple Stressors, Pests and Diseases”*. Action
-**1-12684**.\
-![](images/GitHub-Logo.png){.footer-logo  width=80px}
-[HYDRA-EO-Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
+© 2026 **HYDRA-EO**.  
+Funded by the European Space Agency (ESA) under EXPRO+ *“Crop Multiple
+Stressors, Pests and Diseases”*, Action **1-12684**.  
+![](images/GitHub-Logo.png){.footer-logo width="80px"}
+[HYDRA-EO Workflow](https://github.com/CCGCAM/HYDRA-EO-workflow/)
 ::::

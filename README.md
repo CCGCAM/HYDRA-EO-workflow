@@ -26,12 +26,12 @@ HYDRA-EO is designed to advance crop stress monitoring through a hybrid framewor
 
 HYDRA-EO delivers open and reproducible resources that can be directly reused by the EO and crop science community:
 
--   **Synthetic Datasets**: PROSAIL and SCOPE-based look-up tables (LUTs), trait inversion experiments, and multi-sensor resampled reflectance libraries (Sentinel-2, PRISMA, EnMAP, CHIME, FLEX, ECOSTRESS).
--   **Shiny Applications**: Interactive tools for trait–reflectance exploration, NDVI/SIF analysis, and classification workflows, accessible through the `apps/` folder.
--   **Notebooks & Tutorials**: R Markdown and Python notebooks for hyperspectral/thermal data processing, radiative transfer simulations, and hybrid ML workflows (`notebooks/`).
--   **Reusable Scripts**: Core R and Python functions for data preprocessing, sensor harmonization, and ML model training (`scripts/`).
--   **Scientific Roadmap**: Documentation of methodological advances, validation strategies, and ESA mission preparatory contributions (`docs/` + `routemap/`).
--   **Open Science Integration**: Workflows packaged for ESA’s **Agriculture Virtual Lab (AVL)** and datasets published on **EarthCODE** with FAIR metadata and DOI assignment.
+- **Synthetic Datasets**: PROSAIL and SCOPE-based look-up tables (LUTs), trait inversion experiments, and multi-sensor resampled reflectance libraries (Sentinel-2, PRISMA, EnMAP, CHIME, FLEX, ECOSTRESS).
+- **Shiny Applications**: Interactive tools for trait–reflectance exploration, NDVI/SIF analysis, and classification workflows, accessible through the `apps/` folder.
+- **Notebooks & Tutorials**: R Markdown and Python notebooks for hyperspectral/thermal data processing, radiative transfer simulations, and hybrid ML workflows (`notebooks/`).
+- **Reusable Scripts**: Core R and Python functions for data preprocessing, sensor harmonization, and ML model training (`scripts/`).
+- **Scientific Roadmap**: Documentation of methodological advances, validation strategies, and ESA mission preparatory contributions (`docs/` + `routemap/`).
+- **Open Science Integration**: Workflows packaged for ESA’s **Agriculture Virtual Lab (AVL)** and datasets published on **EarthCODE** with FAIR metadata and DOI assignment.
 
 ------------------------------------------------------------------------
 
@@ -78,9 +78,9 @@ source("scripts/R/renv_init.R")  # installs renv, snapshots packages
 
 ## Review & Templates
 
--   **Pull request review**: see `PULL_REVIEW.md` for scientific content checklist (RTM–ML, datasets, reproducibility).\
--   **GitLab issue templates**: Bug, Feature, Dataset under `.gitlab/issue_templates/`.\
--   **Merge request template**: `.gitlab/merge_request_templates/Standard.md`.
+- **Pull request review**: see `PULL_REVIEW.md` for scientific content checklist (RTM–ML, datasets, reproducibility).\
+- **GitLab issue templates**: Bug, Feature, Dataset under `.gitlab/issue_templates/`.\
+- **Merge request template**: `.gitlab/merge_request_templates/Standard.md`.
 
 ## Radiative Transfer Modeling in HYDRA-EO
 

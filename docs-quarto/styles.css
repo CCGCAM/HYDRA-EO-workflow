@@ -189,10 +189,38 @@ main.content {
 .footer-logo {
   display: inline-block;
   height: 40px;
-  vertical-align: middle; /
+  vertical-align: middle;
   margin: 0 6px 0 0;
   opacity: 0.85;
 }
+
+/* Tool cards: retain the current HYDRA visual language */
+.tools-main-link {
+  display: inline-block;
+  margin: .8rem 0 1.4rem;
+  padding: .65rem 1.15rem;
+  border-radius: 999px;
+  color: #fff !important;
+  background: var(--hydra-navy);
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 50, 71, .16);
+}
+
+.tool-heading {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-bottom: .5rem;
+}
+
+.tool-heading p { margin: 0; }
+.tool-heading img { height: 22px; width: auto; margin: 0; }
+.tool-heading h3 { margin: 0; }
+.tool-card-r { border-top: 4px solid #276dc3; }
+.tool-card-python { border-top: 4px solid #ffd343; }
+.tool-card-app { border-top: 4px solid #2bb3a3; }
+.vbl-card li { margin-bottom: .45rem; }
+.vbl-card li img { height: 20px; width: auto; vertical-align: middle; }
 
 /* Timeline container */
 .wp-timeline {
