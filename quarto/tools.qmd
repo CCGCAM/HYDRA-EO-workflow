@@ -103,7 +103,7 @@ Python implementation of the SCOPE workflow for batch simulations of
 reflectance, fluorescence, photosynthesis, temperature and energy-balance
 outputs.
 
-- [![](https://img.shields.io/badge/GitHub-Source-181717?logo=github&logoColor=white){alt="GitHub source"}](https://github.com/CCGCAM/RTM-Suite/tree/main/SCOPEinPython){target="_blank"}
+- [![](https://img.shields.io/badge/GitHub-RTM--Suite-181717?logo=github&logoColor=white){alt="RTM-Suite on GitHub"}](https://github.com/CCGCAM/RTM-Suite){target="_blank"}
 - [![](https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&logoColor=white){alt="Reference documentation"}](https://ccgcam.github.io/RTM-Suite/#docs){target="_blank"}
 - [Python tutorials →](https://ccgcam.github.io/RTM-Suite/tutorials-python.html#scopeinpython){target="_blank"}
 ::::

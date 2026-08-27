@@ -12,6 +12,22 @@ Hybrid Machine Learning for **Multi‑Stressor Crop Disease and Pest Detection**
 
 This repository hosts the open materials of the ESA HYDRA‑EO concept: code, data schemas, docs, and the scientific roadmap.
 
+<p align="center">
+  <a href="https://hydra-eo.eu/"><img src="https://img.shields.io/badge/HYDRA--EO-Project_website-003247" alt="HYDRA-EO website"></a>
+  <a href="https://ccgcam.github.io/HYDRA-EO-workflow/"><img src="https://img.shields.io/badge/Quarto-Workflow_docs-39729E?logo=quarto&logoColor=white" alt="HYDRA-EO workflow documentation"></a>
+  <a href="https://ccgcam.github.io/RTM-Suite/"><img src="https://img.shields.io/badge/RTM--Suite-R_+_Python-2BB3A3" alt="RTM-Suite"></a>
+  <a href="https://github.com/CCGCAM/RTM-Suite"><img src="https://img.shields.io/badge/GitHub-RTM--Suite-181717?logo=github&logoColor=white" alt="RTM-Suite on GitHub"></a>
+</p>
+
+## Documentation and related platforms
+
+| Resource | Purpose |
+|:--|:--|
+| [HYDRA-EO project website](https://hydra-eo.eu/) | Project overview, objectives, consortium, news and public outputs |
+| [HYDRA-EO workflow documentation](https://ccgcam.github.io/HYDRA-EO-workflow/) | Quarto documentation for pipelines, tools, documents and timeline |
+| [RTM-Suite](https://ccgcam.github.io/RTM-Suite/) | R and Python packages, reference manuals, tutorials, applications and examples |
+| [RTM-Suite source](https://github.com/CCGCAM/RTM-Suite) | Coordinated development and cross-language verification of the modelling ecosystem |
+
 ## Project Objectives
 
 HYDRA-EO is designed to advance crop stress monitoring through a hybrid framework that integrates radiative transfer modeling, machine learning, and multi-sensor EO data. The core objectives are:
@@ -39,15 +55,16 @@ HYDRA-EO delivers open and reproducible resources that can be directly reused by
 
 ```         
 HYDRA‑EO/
-├─ assets/                # images, figures (place logo.png here)
-├─ info/                  # call text, proposal PDFs, partner info (now empty)
+├─ assets/                # logos, images and scientific figures
 ├─ apps/                  # Shiny apps
+├─ quarto/                # editable Quarto website sources
+├─ docs-quarto/           # rendered Quarto website for GitHub Pages
 ├─ scripts/               # reusable code (R / Python)
 │  ├─ R/
 │  └─ python/
 ├─ notebooks/             # exploration, tutorials, reports
 ├─ stac/                  # stac collections (e.g., aerial campaigns)
-├─ data/                  # (empty) pointers & README on data policy
+├─ data/                  # example data, inventories and data-policy notes
 │  ├─ raw/                # raw acquisitions (not tracked)
 │  ├─ interim/            # intermediate products
 │  └─ processed/          # final products / examples
@@ -82,29 +99,40 @@ source("scripts/R/renv_init.R")  # installs renv, snapshots packages
 - **GitLab issue templates**: Bug, Feature, Dataset under `.gitlab/issue_templates/`.\
 - **Merge request template**: `.gitlab/merge_request_templates/Standard.md`.
 
-## Radiative Transfer Modeling in HYDRA-EO
+## Radiative transfer modelling and RTM-Suite
 
-The HYDRA-EO project builds upon two in-house R packages developed and maintained by the team, which form the backbone of the synthetic simulations used in this repository:
+HYDRA-EO uses [**RTM-Suite**](https://ccgcam.github.io/RTM-Suite/) as its
+open modelling ecosystem. RTM-Suite keeps the R and Python implementations,
+interactive applications, documentation and verified tutorials together. This
+provides a consistent physical basis for simulations and trait-retrieval
+workflows across both languages.
 
-### 🔹 [ToolsRTM](https://gitlab.com/caminoccg/toolsrtm)
-
-ToolsRTM is a comprehensive R package for structural radiative transfer modeling at canopy level. It supports PROSAIL and other 1D RTM simulations, enables the generation of look-up tables (LUTs), and allows band resampling to different sensors such as Sentinel-2, PRISMA, EnMAP, and CHIME.
-
-The package also includes utilities for computing vegetation indices, BRF, and sensitivity analyses, along with Shiny applications for interactive trait–reflectance exploration.
-
-### 🔹 [SCOPEinR](https://gitlab.com/caminoccg/scopeinr)
-
-SCOPEinR is an R implementation of the SCOPE model for functional radiative transfer modeling. It simulates photosynthesis, sun-induced fluorescence (SIF), gross primary production (GPP), canopy temperature, and transpiration.
-
-SCOPEinR links physiological traits with reflectance and flux measurements and integrates meteorological drivers from flux towers. It also provides Shiny applications for interactive exploration of functional traits and outputs.
+| Tool | Language | Main role | Source | Documentation |
+|:--|:--:|:--|:--:|:--:|
+| **ToolsRTM** | ![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white) | Leaf, canopy and soil RTMs; LUTs; sensor convolution; ML/DL inversion | [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab&logoColor=white)](https://gitlab.com/caminoccg/toolsrtm) | [Reference](https://ccgcam.github.io/RTM-Suite/toolsrtm/) |
+| **SCOPEinR** | ![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white) | Reflectance, photosynthesis, SIF, temperature and energy balance | [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab&logoColor=white)](https://gitlab.com/caminoccg/scopeinr) | [Reference](https://ccgcam.github.io/RTM-Suite/scopeinr/) |
+| **toolsrtm** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) | Python implementation of the ToolsRTM core, STAC retrieval and inversion | [![GitHub](https://img.shields.io/badge/GitHub-source-181717?logo=github&logoColor=white)](https://github.com/CCGCAM/ToolsRTMinPython) | [Documentation hub](https://ccgcam.github.io/RTM-Suite/#docs) |
+| **scopeinpython** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) | Python workflows for SCOPE simulations and batch processing | [![GitHub](https://img.shields.io/badge/GitHub-RTM--Suite-181717?logo=github&logoColor=white)](https://github.com/CCGCAM/RTM-Suite) | [Documentation hub](https://ccgcam.github.io/RTM-Suite/#docs) |
+| **ToolsRTM.app** | ![Shiny](https://img.shields.io/badge/R_Shiny-apps-1F77B4?logo=rstudio&logoColor=white) | Interactive RTM simulation, LUT, inversion and STAC applications | [![GitHub](https://img.shields.io/badge/GitHub-apps-181717?logo=github&logoColor=white)](https://github.com/CCGCAM/RTM-Suite/tree/main/ToolsRTM.app) | [Applications](https://ccgcam.github.io/RTM-Suite/#apps) |
 
 ------------------------------------------------------------------------
 
-Together, **ToolsRTM + SCOPEinR** allow HYDRA-EO to generate **synthetic datasets** that couple **structural (reflectance)** and **functional (photosynthesis, SIF)** signals, providing a robust foundation for algorithm validation, stress detection, and multi-sensor data integration in the ESA monitoring framework.
+Together, these tools allow HYDRA-EO to generate **synthetic datasets** that
+couple **structural signals** (reflectance and canopy architecture) with
+**functional signals** (photosynthesis, SIF and temperature). These datasets
+support algorithm validation, stress detection and multi-sensor integration
+within the ESA monitoring framework.
 
-### Manuals
+### Documentation and tutorials
 
-The manuals are accessible through the [Shiny app](https://carlos-camino.shinyapps.io/0-toolsrtm-simulator/) or directly within the [ToolsRTM](https://carlos-camino.shinyapps.io/0-toolsrtm-simulator/_w_ef4421a7/Notebooks/R/ToolsRTM/ToolsRTM.html) and [SCOPEinR](https://carlos-camino.shinyapps.io/0-toolsrtm-simulator/_w_ef4421a7/Notebooks/R/SCOPEinR/SCOPEinR.html) packages. Vignettes are currently under development.
+RTM-Suite provides maintained entry points for all documentation:
+
+- [Reference manuals](https://ccgcam.github.io/RTM-Suite/#docs)
+- [R tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-overview.html)
+- [Python tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-python.html)
+- [R and Python comparison](https://ccgcam.github.io/RTM-Suite/comparison.html)
+- [Interactive applications](https://ccgcam.github.io/RTM-Suite/#apps)
+- [Copy-ready examples](https://ccgcam.github.io/RTM-Suite/#examples)
 
 ### Citation
 
@@ -120,4 +148,6 @@ Camino et al., (in prep). Integrating physiological plant traits with Sentinel-2
 
 [![](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-The **ToolsRTM** and **SCOPEinR** package is licensed under the MIT License, allowing for free use, modification, and distribution. This package is available on GitLab, and we encourage contributions and collaborations from the community. For more details, please refer to the LICENSE file in the repository.
+This repository is licensed under the MIT License. ToolsRTM, SCOPEinR and the
+other RTM-Suite components are distributed through their respective
+repositories; consult each component's license before reuse or redistribution.
