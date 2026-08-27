@@ -8,10 +8,13 @@ format:
 
 ::: {.hero-card}
 
-# HYDRA-EO official workflow repository <span></span>
+# HYDRA-EO workflow & open tools <span></span>
 
 ::: {.hero-text}
-This official page summarises the main processing pipelines, methodological choices and software components developed within HYDRA-EO. It is intended for the consortium (WU-DES, WENR-WUR, CNR-IBE, CIAG-IRIAF) and should not be shared outside ESA and project partners without prior agreement.
+This site connects the HYDRA-EO processing pipelines, project documentation
+and open radiative-transfer tools. Explore reproducible workflows for UAV,
+airborne and satellite data, together with the R and Python ecosystem used for
+physics-informed crop-stress retrieval.
 :::
 
 ::: {.hero-tags}
@@ -27,6 +30,12 @@ Hyperspectral & thermal
 ::: {.pill-mini}
 ESA EXPRO+ project
 :::
+:::
+
+::: {.home-actions}
+[Explore the tools](tools.qmd){.tools-main-link}
+[Browse documentation](documents.qmd){.tools-outline-link}
+[Open RTM-Suite](https://ccgcam.github.io/RTM-Suite/){.tools-outline-link target="_blank"}
 :::
 
 :::
@@ -71,6 +80,57 @@ RTM library & hybrid ML
 PROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, plant trait retrieval, and hybrid ML models trained on combined RTM–EO features for stress detection
 :::
 
+:::
+
+## Connected open-source ecosystem
+
+HYDRA-EO is linked directly to
+[RTM-Suite](https://ccgcam.github.io/RTM-Suite/), where the maintained
+packages, reference manuals, tutorials and interactive applications are
+published.
+
+::: {.card-grid}
+::: {.vbl-card .tool-card-r}
+![](https://img.shields.io/badge/R-276DC3.svg?logo=r&logoColor=white){alt="R"}
+
+### ToolsRTM & SCOPEinR
+
+Generate reflectance, fluorescence, photosynthesis, temperature and
+energy-balance simulations; build LUTs and train trait-retrieval models.
+
+[R tools and manuals →](tools.qmd#r-packages)
+:::
+
+::: {.vbl-card .tool-card-python}
+![](https://img.shields.io/badge/Python-3776AB.svg?logo=python&logoColor=white){alt="Python"}
+
+### toolsrtm & scopeinpython
+
+Run the corresponding modelling and inversion workflows from Python, with
+cross-language examples and numerical comparison.
+
+[Python tools and manuals →](tools.qmd#python-libraries)
+:::
+
+::: {.vbl-card .tool-card-app}
+![](https://img.shields.io/badge/R_Shiny-Interactive-1F77B4.svg?logo=rstudio&logoColor=white){alt="R Shiny"}
+
+### Interactive applications
+
+Explore PROSAIL, SCOPE, LUTs, inversion and STAC workflows through the
+ToolsRTM.app interfaces.
+
+[Open the applications →](https://ccgcam.github.io/RTM-Suite/#apps){target="_blank"}
+:::
+:::
+
+## Project links
+
+::: {.project-link-strip}
+[HYDRA-EO project website](https://hydra-eo.eu/){target="_blank"}
+[Workflow repository](https://github.com/CCGCAM/HYDRA-EO-workflow){target="_blank"}
+[RTM-Suite](https://ccgcam.github.io/RTM-Suite/){target="_blank"}
+[RTM-Suite source](https://github.com/CCGCAM/RTM-Suite){target="_blank"}
 :::
 
 ------------------------------------------------------------------------

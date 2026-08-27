@@ -3,13 +3,15 @@ title: "Documents"
 format: html
 ---
 
-::: section-label
-Section · Documentations
+::: {.section-label}
+Section · Documentation
 :::
 
-## Official docs & documentation access
+## Documentation hub
 
-This page provides access to official documentation related to the HYDRA-EO project, including code, processing pipelines, and technical resources.The materials listed here are publicly available and intended for open dissemination, unless explicitly stated otherwise.
+This page connects the HYDRA-EO project documentation with its source code,
+processing pipelines and the maintained RTM-Suite manuals. Public resources
+open directly in their authoritative location.
 
 ::: {.card-grid}
 
@@ -22,6 +24,10 @@ Docs
 
 Methodological notes, protocol documents, and technical PDFs describing the processing
 pipelines, modelling assumptions, and analysis workflows developed within HYDRA-EO.
+
+[Methods](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/METHODS.md){target="_blank"} ·
+[Datasets](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/DATASETS.md){target="_blank"} ·
+[Synthetic modelling module](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/SYNTHETIC_MODELING_MODULE.md){target="_blank"}
 :::
 
 ::: {.vbl-card}
@@ -32,6 +38,8 @@ Fields
 
 Official field manuals covering disease scoring, sampling strategies, and experimental
 protocols used across crop trials (e.g. olive, pistachio, potato).
+
+[Browse project documentation](https://github.com/CCGCAM/HYDRA-EO-workflow/tree/main/docs){target="_blank"}
 :::
 
 ::: {.vbl-card}
@@ -42,8 +50,60 @@ ESA
 
 Meeting minutes, internal presentations, and ESA reporting templates supporting
 project coordination, reviews, and contractual reporting.
+
+[Deliverables](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/outputs/deliverables.md){target="_blank"} ·
+[Milestones](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/outputs/milestones.md){target="_blank"} ·
+[Publications](https://github.com/CCGCAM/HYDRA-EO-workflow/blob/main/docs/outputs/publications.md){target="_blank"}
 :::
 
+:::
+
+## Software manuals and tutorials
+
+::: {.card-grid}
+::: {.vbl-card .tool-card-r}
+![](https://img.shields.io/badge/R-276DC3.svg?logo=r&logoColor=white){alt="R"}
+
+### R reference manuals
+
+Function references and tutorials for ToolsRTM and SCOPEinR.
+
+[ToolsRTM manual](https://ccgcam.github.io/RTM-Suite/toolsrtm/){target="_blank"} ·
+[SCOPEinR manual](https://ccgcam.github.io/RTM-Suite/scopeinr/){target="_blank"} ·
+[R tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-overview.html){target="_blank"}
+:::
+
+::: {.vbl-card .tool-card-python}
+![](https://img.shields.io/badge/Python-3776AB.svg?logo=python&logoColor=white){alt="Python"}
+
+### Python documentation
+
+Reference material and worked examples for toolsrtm and scopeinpython.
+
+[Documentation hub](https://ccgcam.github.io/RTM-Suite/#docs){target="_blank"} ·
+[Python tutorials](https://ccgcam.github.io/RTM-Suite/tutorials-python.html){target="_blank"}
+:::
+
+::: {.vbl-card .tool-card-app}
+![](https://img.shields.io/badge/GitHub-RTM--Suite-181717.svg?logo=github&logoColor=white){alt="GitHub"}
+
+### Examples and applications
+
+Verified code examples, R/Python comparison and interactive Shiny tools.
+
+[Examples](https://ccgcam.github.io/RTM-Suite/#examples){target="_blank"} ·
+[R vs Python](https://ccgcam.github.io/RTM-Suite/comparison.html){target="_blank"} ·
+[Applications](https://ccgcam.github.io/RTM-Suite/#apps){target="_blank"}
+:::
+:::
+
+## Repositories
+
+::: {.project-link-strip}
+[HYDRA-EO on GitHub](https://github.com/CCGCAM/HYDRA-EO-workflow){target="_blank"}
+[RTM-Suite on GitHub](https://github.com/CCGCAM/RTM-Suite){target="_blank"}
+[ToolsRTM on GitLab](https://gitlab.com/caminoccg/toolsrtm){target="_blank"}
+[SCOPEinR on GitLab](https://gitlab.com/caminoccg/scopeinr){target="_blank"}
 :::
 
 

@@ -60,28 +60,56 @@
     "href": "documents.html",
     "title": "Documents",
     "section": "",
-    "text": "Section · Documentations"
+    "text": "Section · Documentation"
   },
   {
-    "objectID": "documents.html#official-docs-documentation-access",
-    "href": "documents.html#official-docs-documentation-access",
+    "objectID": "documents.html#documentation-hub",
+    "href": "documents.html#documentation-hub",
     "title": "Documents",
-    "section": "Official docs & documentation access",
-    "text": "Official docs & documentation access\nThis page provides access to official documentation related to the HYDRA-EO project, including code, processing pipelines, and technical resources.The materials listed here are publicly available and intended for open dissemination, unless explicitly stated otherwise.\n\n\n\nDocs\n\n\nMethodological documentation\nMethodological notes, protocol documents, and technical PDFs describing the processing pipelines, modelling assumptions, and analysis workflows developed within HYDRA-EO.\n\n\n\n\nFields\n\n\nField manuals & protocols\nOfficial field manuals covering disease scoring, sampling strategies, and experimental protocols used across crop trials (e.g. olive, pistachio, potato).\n\n\n\n\nESA\n\n\nMeetings & reporting\nMeeting minutes, internal presentations, and ESA reporting templates supporting project coordination, reviews, and contractual reporting.\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”. Action 1-12684.\n HYDRA-EO-Workflow"
+    "section": "Documentation hub",
+    "text": "Documentation hub\nThis page connects the HYDRA-EO project documentation with its source code, processing pipelines and the maintained RTM-Suite manuals. Public resources open directly in their authoritative location.\n\n\n\nDocs\n\n\nMethodological documentation\nMethodological notes, protocol documents, and technical PDFs describing the processing pipelines, modelling assumptions, and analysis workflows developed within HYDRA-EO.\nMethods · Datasets · Synthetic modelling module\n\n\n\n\nFields\n\n\nField manuals & protocols\nOfficial field manuals covering disease scoring, sampling strategies, and experimental protocols used across crop trials (e.g. olive, pistachio, potato).\nBrowse project documentation\n\n\n\n\nESA\n\n\nMeetings & reporting\nMeeting minutes, internal presentations, and ESA reporting templates supporting project coordination, reviews, and contractual reporting.\nDeliverables · Milestones · Publications"
+  },
+  {
+    "objectID": "documents.html#software-manuals-and-tutorials",
+    "href": "documents.html#software-manuals-and-tutorials",
+    "title": "Documents",
+    "section": "Software manuals and tutorials",
+    "text": "Software manuals and tutorials\n\n\n\n\nR reference manuals\nFunction references and tutorials for ToolsRTM and SCOPEinR.\nToolsRTM manual · SCOPEinR manual · R tutorials\n\n\n\n\n\nPython documentation\nReference material and worked examples for toolsrtm and scopeinpython.\nDocumentation hub · Python tutorials\n\n\n\n\n\nExamples and applications\nVerified code examples, R/Python comparison and interactive Shiny tools.\nExamples · R vs Python · Applications"
+  },
+  {
+    "objectID": "documents.html#repositories",
+    "href": "documents.html#repositories",
+    "title": "Documents",
+    "section": "Repositories",
+    "text": "Repositories\n\nHYDRA-EO on GitHub RTM-Suite on GitHub ToolsRTM on GitLab SCOPEinR on GitLab\n\n\n\n\n\n\n© 2026 HYDRA-EO.\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”. Action 1-12684.\n HYDRA-EO-Workflow"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Overview",
     "section": "",
-    "text": "This official page summarises the main processing pipelines, methodological choices and software components developed within HYDRA-EO. It is intended for the consortium (WU-DES, WENR-WUR, CNR-IBE, CIAG-IRIAF) and should not be shared outside ESA and project partners without prior agreement.\n\n\n\nHybrid ML & RTMs\n\n\nCrop stress & pests\n\n\nHyperspectral & thermal\n\n\nESA EXPRO+ project"
+    "text": "This site connects the HYDRA-EO processing pipelines, project documentation and open radiative-transfer tools. Explore reproducible workflows for UAV, airborne and satellite data, together with the R and Python ecosystem used for physics-informed crop-stress retrieval.\n\n\n\nHybrid ML & RTMs\n\n\nCrop stress & pests\n\n\nHyperspectral & thermal\n\n\nESA EXPRO+ project\n\n\n\nExplore the tools Browse documentation Open RTM-Suite"
   },
   {
     "objectID": "index.html#processing-pipelines-by-data-source",
     "href": "index.html#processing-pipelines-by-data-source",
     "title": "Overview",
     "section": "Processing pipelines by data source",
-    "text": "Processing pipelines by data source\nPipelines are organised by data source and level of processing. Each pipeline folder in the repository should contain a README.md describing inputs, steps, outputs and links to scripts or notebooks.\n\n\n\nUAV/airborne\n\n\nUAV & airborne processing\nRadiometric and geometric correction of UAV and airborne hyperspectral/thermal data, mosaicking, BRDF normalisation and co-registration with field plots. Output products include surface reflectance cubes, temperature maps and quality masks.\n\n\n\n\nSatellite EO processing\n\n\nSatellite EO processing\nSentinel-2, PRISMA and EnMAP workflows (e.g. Sen2Cor atmospheric correction, spectral resampling, tiling and time-series aggregation), harmonised across sites for crop-stressor analysis and EO upscaling.\n\n\n\n\nRTM library & hybrid ML\n\n\nHybrid ML methods\nPROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, plant trait retrieval, and hybrid ML models trained on combined RTM–EO features for stress detection\n\n\n\n\n\n\n\n\n© 2026 HYDRA-EO.\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”. Action 1-12684.\nHYDRA-EO-Workflow"
+    "text": "Processing pipelines by data source\nPipelines are organised by data source and level of processing. Each pipeline folder in the repository should contain a README.md describing inputs, steps, outputs and links to scripts or notebooks.\n\n\n\nUAV/airborne\n\n\nUAV & airborne processing\nRadiometric and geometric correction of UAV and airborne hyperspectral/thermal data, mosaicking, BRDF normalisation and co-registration with field plots. Output products include surface reflectance cubes, temperature maps and quality masks.\n\n\n\n\nSatellite EO processing\n\n\nSatellite EO processing\nSentinel-2, PRISMA and EnMAP workflows (e.g. Sen2Cor atmospheric correction, spectral resampling, tiling and time-series aggregation), harmonised across sites for crop-stressor analysis and EO upscaling.\n\n\n\n\nRTM library & hybrid ML\n\n\nHybrid ML methods\nPROSAIL / SCOPE forward simulations via ToolsRTM and SCOPEinR, LUT generation, plant trait retrieval, and hybrid ML models trained on combined RTM–EO features for stress detection"
+  },
+  {
+    "objectID": "index.html#connected-open-source-ecosystem",
+    "href": "index.html#connected-open-source-ecosystem",
+    "title": "Overview",
+    "section": "Connected open-source ecosystem",
+    "text": "Connected open-source ecosystem\nHYDRA-EO is linked directly to RTM-Suite, where the maintained packages, reference manuals, tutorials and interactive applications are published.\n\n\n\n\nToolsRTM & SCOPEinR\nGenerate reflectance, fluorescence, photosynthesis, temperature and energy-balance simulations; build LUTs and train trait-retrieval models.\nR tools and manuals →\n\n\n\n\n\ntoolsrtm & scopeinpython\nRun the corresponding modelling and inversion workflows from Python, with cross-language examples and numerical comparison.\nPython tools and manuals →\n\n\n\n\n\nInteractive applications\nExplore PROSAIL, SCOPE, LUTs, inversion and STAC workflows through the ToolsRTM.app interfaces.\nOpen the applications →"
+  },
+  {
+    "objectID": "index.html#project-links",
+    "href": "index.html#project-links",
+    "title": "Overview",
+    "section": "Project links",
+    "text": "Project links\n\nHYDRA-EO project website Workflow repository RTM-Suite RTM-Suite source\n\n\n\n\n\n\n© 2026 HYDRA-EO.\nHYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender “Crop Multiple Stressors, Pests and Diseases”. Action 1-12684.\nHYDRA-EO-Workflow"
   },
   {
     "objectID": "timeline.html",

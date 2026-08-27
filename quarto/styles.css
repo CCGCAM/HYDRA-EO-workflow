@@ -222,6 +222,45 @@ main.content {
 .vbl-card li { margin-bottom: .45rem; }
 .vbl-card li img { height: 20px; width: auto; vertical-align: middle; }
 
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.25rem;
+}
+
+.home-actions .tools-main-link { margin: 0; }
+
+.tools-outline-link {
+  display: inline-block;
+  padding: .62rem 1.1rem;
+  border: 1px solid var(--hydra-blue);
+  border-radius: 999px;
+  color: var(--hydra-blue) !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-link-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: 1rem 0 2.3rem;
+}
+
+.project-link-strip a {
+  padding: .55rem .9rem;
+  border: 1px solid var(--hydra-border);
+  border-radius: 10px;
+  color: var(--hydra-navy);
+  background: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, .04);
+}
+
+.vbl-card > p > img { height: 22px; width: auto; }
+
 /* Timeline container */
 .wp-timeline {
   margin: 2rem 0 1.5rem;
