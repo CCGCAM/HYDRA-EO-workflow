@@ -127,7 +127,7 @@ ToolsRTM.app interfaces.
 ## Project links
 
 ::: {.project-link-strip}
-[HYDRA-EO project website](https://hydra-eo.eu/){target="_blank"}
+[HYDRA-EO project website](https://hydra-eo.wur.nl/){target="_blank"}
 [Workflow repository](https://github.com/CCGCAM/HYDRA-EO-workflow){target="_blank"}
 [RTM-Suite](https://ccgcam.github.io/RTM-Suite/){target="_blank"}
 [RTM-Suite source](https://github.com/CCGCAM/RTM-Suite){target="_blank"}

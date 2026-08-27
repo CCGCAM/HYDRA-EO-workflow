@@ -13,7 +13,7 @@ Hybrid Machine Learning for **Multi‑Stressor Crop Disease and Pest Detection**
 This repository hosts the open materials of the ESA HYDRA‑EO concept: code, data schemas, docs, and the scientific roadmap.
 
 <p align="center">
-  <a href="https://hydra-eo.eu/"><img src="https://img.shields.io/badge/HYDRA--EO-Project_website-003247" alt="HYDRA-EO website"></a>
+  <a href="https://hydra-eo.wur.nl/"><img src="https://img.shields.io/badge/HYDRA--EO-Project_website-003247" alt="HYDRA-EO website"></a>
   <a href="https://ccgcam.github.io/HYDRA-EO-workflow/"><img src="https://img.shields.io/badge/Quarto-Workflow_docs-39729E?logo=quarto&logoColor=white" alt="HYDRA-EO workflow documentation"></a>
   <a href="https://ccgcam.github.io/RTM-Suite/"><img src="https://img.shields.io/badge/RTM--Suite-R_+_Python-2BB3A3" alt="RTM-Suite"></a>
   <a href="https://github.com/CCGCAM/RTM-Suite"><img src="https://img.shields.io/badge/GitHub-RTM--Suite-181717?logo=github&logoColor=white" alt="RTM-Suite on GitHub"></a>
@@ -23,7 +23,7 @@ This repository hosts the open materials of the ESA HYDRA‑EO concept: code, da
 
 | Resource | Purpose |
 |:--|:--|
-| [HYDRA-EO project website](https://hydra-eo.eu/) | Project overview, objectives, consortium, news and public outputs |
+| [HYDRA-EO project website](https://hydra-eo.wur.nl/) | Project overview, objectives, consortium, news and public outputs |
 | [HYDRA-EO workflow documentation](https://ccgcam.github.io/HYDRA-EO-workflow/) | Quarto documentation for pipelines, tools, documents and timeline |
 | [RTM-Suite](https://ccgcam.github.io/RTM-Suite/) | R and Python packages, reference manuals, tutorials, applications and examples |
 | [RTM-Suite source](https://github.com/CCGCAM/RTM-Suite) | Coordinated development and cross-language verification of the modelling ecosystem |

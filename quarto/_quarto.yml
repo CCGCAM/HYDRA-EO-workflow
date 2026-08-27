@@ -19,7 +19,7 @@ website:
         href: timeline.qmd
     right:
       - text: "HYDRA-EO.eu"
-        href: "https://hydra-eo.eu/"
+        href: "https://hydra-eo.wur.nl/"
 
 format:
   html:

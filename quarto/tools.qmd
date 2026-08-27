@@ -157,7 +157,7 @@ sensor convolution, SCOPE and trait inversion.
 See how these tools support the project's hybrid RTM–ML pipeline for
 multi-stressor crop monitoring across UAV, airborne and satellite scales.
 
-[HYDRA-EO project site →](https://hydra-eo.eu/#tools){target="_blank"}
+[HYDRA-EO project site →](https://hydra-eo.wur.nl/#tools){target="_blank"}
 ::::
 :::::::
 
