@@ -148,6 +148,12 @@ Camino et al., (in prep). Integrating physiological plant traits with Sentinel-2
 
 [![](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This repository is licensed under the MIT License. ToolsRTM, SCOPEinR and the
-other RTM-Suite components are distributed through their respective
-repositories; consult each component's license before reuse or redistribution.
+This HYDRA-EO workflow repository is released under the [MIT License](LICENSE)
+(copyright © 2025 Carlos Camino).
+
+The related [RTM-Suite](https://github.com/CCGCAM/RTM-Suite) repository is also
+released under the MIT License (copyright © 2026 Carlos Camino). Its R,
+Python and Shiny components are maintained and distributed through the
+RTM-Suite ecosystem and its linked source repositories. When reusing a
+component, retain the applicable copyright and MIT permission notice and check
+the license file distributed with that component.
