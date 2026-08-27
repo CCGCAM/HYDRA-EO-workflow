@@ -13,13 +13,13 @@ website:
         href: pipeline.qmd
       - text: "Tools"
         href: tools.qmd
-      - text: "docs"
+      - text: "Docs"
         href: documents.qmd
       - text: "Timeline"
         href: timeline.qmd
     right:
-      - text: "Main site"
-        href: "../index.html"    # botón que vuelve a la web ESA
+      - text: "HYDRA-EO.eu"
+        href: "https://hydra-eo.eu/"
 
 format:
   html:
@@ -29,4 +29,5 @@ format:
     code-copy: true
     smooth-scroll: true
     page-layout: full
+    link-external-newwindow: true
 

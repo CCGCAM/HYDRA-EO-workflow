@@ -2,13 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="R, Python and interactive tools used by HYDRA-EO.">
 
 <title>Tools – HYDRA-EO</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-da4503ffa3b1e3d5174b973e04fc2c11.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-de1d9db716a7ad7caf9a7f73279c5ec9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +85,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./../assets/ESA_logo_2020_White.png" alt="" class="navbar-logo">
+    <img src="./../assets/ESA_logo_2020_White.png" alt="" class="navbar-logo light-content">
+    <img src="./../assets/ESA_logo_2020_White.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">HYDRA-EO</span>
@@ -107,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./documents.html"> 
-<span class="menu-text">docs</span></a>
+<span class="menu-text">Docs</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./timeline.html"> 
@@ -116,8 +121,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../index.html"> 
-<span class="menu-text">Main site</span></a>
+    <a class="nav-link" href="https://hydra-eo.eu/"> 
+<span class="menu-text">HYDRA-EO.eu</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -139,6 +144,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Tools</h1>
 </div>
 
+<div>
+  <div class="description">
+    R, Python and interactive tools used by HYDRA-EO.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page">
@@ -154,47 +164,130 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="section-label">
-<p>Section · Tools</p>
+<p>Section · Open tools</p>
 </div>
-<section id="software-used-in-hydra-eo-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="software-used-in-hydra-eo-tutorials">Software used in HYDRA-EO tutorials</h2>
-<p>This page summarises the core software tools and R packages used throughout the HYDRA-EO tutorials. These tools support radiative transfer modelling, energy balance simulations, and hybrid approaches for vegetation trait retrieval, disease detection, and ecosystem monitoring.</p>
-<hr>
-<div class="card-grid">
-<div class="vbl-card">
+<section id="software-ecosystem-for-hydra-eo" class="level2">
+<h2 class="anchored" data-anchor-id="software-ecosystem-for-hydra-eo">Software ecosystem for HYDRA-EO</h2>
+<p>HYDRA-EO uses and extends the <strong>RTM-Suite</strong> ecosystem: coordinated R and Python implementations for radiative transfer modelling, sensor convolution, trait inversion and interactive exploration. Use the links below to move directly between source code, reference documentation and tutorials.</p>
+<div class="hero-tags">
 <div class="pill-mini">
-<p>R · Radiative transfer</p>
+<p>Leaf · canopy · soil</p>
 </div>
+<div class="pill-mini">
+<p>Reflectance · SIF · thermal</p>
+</div>
+<div class="pill-mini">
+<p>Sensor convolution</p>
+</div>
+<div class="pill-mini">
+<p>ML &amp; deep learning</p>
+</div>
+</div>
+<p><a href="https://ccgcam.github.io/RTM-Suite/" class="tools-main-link" target="_blank"><strong>Explore the complete RTM-Suite →</strong></a></p>
+<hr>
+</section>
+<section id="r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages">R packages</h2>
+<div class="card-grid">
+<div class="vbl-card tool-card-r">
+<div class="tool-heading">
+<p><img src="https://img.shields.io/badge/R-276DC3?logo=r&amp;logoColor=white.png" class="img-fluid" alt="R"></p>
 <section id="toolsrtm" class="level3">
 <h3 class="anchored" data-anchor-id="toolsrtm">ToolsRTM</h3>
-<p><strong>ToolsRTM</strong> is an R package developed within HYDRA-EO to support forward radiative transfer simulations at leaf and canopy level. It provides implementations and wrappers for widely used RTMs, enabling consistent simulation of reflectance and fluorescence across multiple sensors.</p>
-<p>Main capabilities include PROSAIL-based canopy reflectance simulations, band convolution to satellite spectral response functions, and harmonisation across multispectral and hyperspectral platforms.</p>
-<ul>
-<li>Forward simulations of <strong>PROSAIL</strong>, <strong>INFORM</strong>, <strong>SPART</strong>, and <strong>MARMIT</strong></li>
-<li>Sensor-specific band aggregation</li>
-<li>Designed for teaching, prototyping, and research workflows</li>
-</ul>
-<p><strong>Repository:</strong><br>
-<a href="https://gitlab.com/caminoccg/toolsrtm" class="uri">https://gitlab.com/caminoccg/toolsrtm</a></p>
 </section>
 </div>
-<div class="vbl-card">
-<div class="pill-mini">
-<p>R · Energy balance &amp; SIF</p>
+<p>Leaf, canopy and soil radiative transfer models, LUT generation, sensor convolution and trait inversion. It includes PROSPECT, FLUSPECT, Liberty, fourSAIL, foursail2, INFORM, MARMIT and SPART workflows.</p>
+<ul>
+<li><a href="https://gitlab.com/caminoccg/toolsrtm" target="_blank"><img src="https://img.shields.io/badge/GitLab-Source-FC6D26?logo=gitlab&amp;logoColor=white.png" class="img-fluid" alt="GitLab source"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/toolsrtm/" target="_blank"><img src="https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&amp;logoColor=white.png" class="img-fluid" alt="Reference documentation"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/tutorials-overview.html" target="_blank">R tutorials →</a></li>
+</ul>
 </div>
+<div class="vbl-card tool-card-r">
+<div class="tool-heading">
+<p><img src="https://img.shields.io/badge/R-276DC3?logo=r&amp;logoColor=white.png" class="img-fluid" alt="R"></p>
 <section id="scopeinr" class="level3">
 <h3 class="anchored" data-anchor-id="scopeinr">SCOPEinR</h3>
-<p><strong>SCOPEinR</strong> provides an R interface to the SCOPE model, allowing users to simulate canopy energy balance, photosynthesis, land surface temperature, and sun-induced fluorescence (SIF) in a reproducible and scriptable environment.</p>
-<p>Within HYDRA-EO tutorials, SCOPEinR is used to link radiative transfer with physiological processes and flux-related variables, supporting the interpretation of hyperspectral and thermal observations.</p>
-<ul>
-<li>Canopy energy balance and flux simulations</li>
-<li>Temperature and SIF modelling</li>
-<li>Integration with RTM-based and machine learning workflows</li>
-</ul>
-<p><strong>Repository:</strong><br>
-<a href="https://gitlab.com/caminoccg/scopeinr" class="uri">https://gitlab.com/caminoccg/scopeinr</a></p>
 </section>
 </div>
+<p>R interface to SCOPE for coupled canopy radiative transfer, photosynthesis, energy balance, land-surface temperature and sun-induced chlorophyll fluorescence (SIF).</p>
+<ul>
+<li><a href="https://gitlab.com/caminoccg/scopeinr" target="_blank"><img src="https://img.shields.io/badge/GitLab-Source-FC6D26?logo=gitlab&amp;logoColor=white.png" class="img-fluid" alt="GitLab source"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/scopeinr/" target="_blank"><img src="https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&amp;logoColor=white.png" class="img-fluid" alt="Reference documentation"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/tutorials-overview.html#scopeinr" target="_blank">R tutorials →</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="python-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="python-libraries">Python libraries</h2>
+<div class="card-grid">
+<div class="vbl-card tool-card-python">
+<div class="tool-heading">
+<p><img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white.png" class="img-fluid" alt="Python"></p>
+<section id="toolsrtm-1" class="level3">
+<h3 class="anchored" data-anchor-id="toolsrtm-1">toolsrtm</h3>
+</section>
+</div>
+<p>Python port of the ToolsRTM core, including leaf and canopy models, spectral indices, sensor convolution, STAC satellite retrieval and classical and deep learning inversion.</p>
+<ul>
+<li><a href="https://github.com/CCGCAM/ToolsRTMinPython" target="_blank"><img src="https://img.shields.io/badge/GitHub-Source-181717?logo=github&amp;logoColor=white.png" class="img-fluid" alt="GitHub source"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/#docs" target="_blank"><img src="https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&amp;logoColor=white.png" class="img-fluid" alt="Reference documentation"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/tutorials-python.html" target="_blank">Python tutorials →</a></li>
+</ul>
+</div>
+<div class="vbl-card tool-card-python">
+<div class="tool-heading">
+<p><img src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=white.png" class="img-fluid" alt="Python"></p>
+<section id="scopeinpython" class="level3">
+<h3 class="anchored" data-anchor-id="scopeinpython">scopeinpython</h3>
+</section>
+</div>
+<p>Python implementation of the SCOPE workflow for batch simulations of reflectance, fluorescence, photosynthesis, temperature and energy-balance outputs.</p>
+<ul>
+<li><a href="https://github.com/CCGCAM/RTM-Suite/tree/main/SCOPEinPython" target="_blank"><img src="https://img.shields.io/badge/GitHub-Source-181717?logo=github&amp;logoColor=white.png" class="img-fluid" alt="GitHub source"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/#docs" target="_blank"><img src="https://img.shields.io/badge/Docs-Reference-1587B5?logo=readthedocs&amp;logoColor=white.png" class="img-fluid" alt="Reference documentation"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/tutorials-python.html#scopeinpython" target="_blank">Python tutorials →</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="interactive-applications" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-applications">Interactive applications</h2>
+<div class="vbl-card tool-card-app">
+<div class="tool-heading">
+<p><img src="https://img.shields.io/badge/R_Shiny-Interactive-1F77B4?logo=rstudio&amp;logoColor=white.png" class="img-fluid" alt="R Shiny"></p>
+<section id="toolsrtm.app" class="level3">
+<h3 class="anchored" data-anchor-id="toolsrtm.app">ToolsRTM.app</h3>
+</section>
+</div>
+<p>Nine point-and-click Shiny applications expose PROSAIL, PROSAIL-BRDF, MARMIT, SPART, SCOPE, LUT generation, RTM comparison, inversion and STAC workflows. In R, launch them through <code>ToolsRTM::get.simulator()</code>.</p>
+<ul>
+<li><a href="https://github.com/CCGCAM/RTM-Suite/tree/main/ToolsRTM.app" target="_blank"><img src="https://img.shields.io/badge/GitHub-Apps-181717?logo=github&amp;logoColor=white.png" class="img-fluid" alt="Apps on GitHub"></a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/#apps" target="_blank">Applications and screenshots →</a></li>
+<li><a href="https://ccgcam.github.io/RTM-Suite/#examples" target="_blank">Examples and copy-ready code →</a></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="documentation-hub" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-hub">Documentation hub</h2>
+<div class="card-grid">
+<section id="choose-a-language" class="level3 vbl-card">
+<h3 class="anchored" data-anchor-id="choose-a-language">Choose a language</h3>
+<p>Compare equivalent implementations, installation options and supported models before selecting an R or Python workflow.</p>
+<p><a href="https://ccgcam.github.io/RTM-Suite/comparison.html" target="_blank">R versus Python →</a></p>
+</section>
+<section id="learn-by-example" class="level3 vbl-card">
+<h3 class="anchored" data-anchor-id="learn-by-example">Learn by example</h3>
+<p>Follow verified tutorials with generated figures, from basic simulations to sensor convolution, SCOPE and trait inversion.</p>
+<p><a href="https://ccgcam.github.io/RTM-Suite/tutorials-overview.html" target="_blank">R tutorials</a> · <a href="https://ccgcam.github.io/RTM-Suite/tutorials-python.html" target="_blank">Python tutorials</a></p>
+</section>
+<section id="connect-to-hydra-eo" class="level3 vbl-card">
+<h3 class="anchored" data-anchor-id="connect-to-hydra-eo">Connect to HYDRA-EO</h3>
+<p>See how these tools support the project’s hybrid RTM–ML pipeline for multi-stressor crop monitoring across UAV, airborne and satellite scales.</p>
+<p><a href="https://hydra-eo.eu/#tools" target="_blank">HYDRA-EO project site →</a></p>
+</section>
 </div>
 <hr>
 <div class="text-center small text-secondary vbl-footer-classic">
@@ -202,8 +295,8 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <p>© 2026 <strong>HYDRA-EO</strong>.<br>
-HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender <em>“Crop Multiple Stressors, Pests and Diseases”</em>. Action <strong>1-12684</strong>.<br>
-<img src="images/GitHub-Logo.png" class="footer-logo img-fluid" width="80"> <a href="https://github.com/CCGCAM/HYDRA-EO-workflow/">HYDRA-EO-Workflow</a></p>
+Funded by the European Space Agency (ESA) under EXPRO+ <em>“Crop Multiple Stressors, Pests and Diseases”</em>, Action <strong>1-12684</strong>.<br>
+<img src="images/GitHub-Logo.png" class="footer-logo img-fluid" width="80"> <a href="https://github.com/CCGCAM/HYDRA-EO-workflow/">HYDRA-EO Workflow</a></p>
 </div>
 
 
@@ -261,13 +354,14 @@ HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender <e
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -296,6 +390,11 @@ HYDRA-EO is funded by the European Space Agency (ESA) under the EXPRO+ Tender <e
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
